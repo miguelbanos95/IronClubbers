@@ -1,31 +1,52 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <a id="title-size" class="navbar-brand" href="/">iClubbers</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link active" aria-current="page" href="#">Contacto</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Categorias
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Techno</a></li>
+            <li><a class="dropdown-item" href="#">Tech-house</a></li>
+            <li><a class="dropdown-item" href="#">Hardcore</a></li>
+            <li><a class="dropdown-item" href="#">Melodic-Techno</a></li>
+            <li><a class="dropdown-item" href="#">Reggaeton</a></li>
           </ul>
         </li>
+        <div class="border border-right border-light"></div>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Crea tu evento</a>
+        </li>
       </ul>
+      <form class="d-flex mx-4">
+        <input class="form-control me-2" type="search" placeholder="Encuentra eventos" aria-label="Search">
+        <button class="btn btn-outline-success fa-solid" type="submit">
+          <i class="fa fa-magnifying-glass"></i>
+        </button>
+      </form>
+
+      <div class="d-flex">
+
+      <li class="nav-item navbar-nav me-auto mb-2 mb-lg-0">
+        <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-heart fa-xl"></i></a>
+      </li>
+      <li class="navbar-nav me-auto mb-2 mb-lg-0 mx-2">
+        <a class="nav-link active" href="#"><i class="fa-solid fa-user fa-xl"></i></a>
+      </li>
+      </div>
     </div>
   </div>
 </nav>
+
+
+

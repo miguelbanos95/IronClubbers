@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/IRON-RAVE';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/IRON-CLUBBER';
 
 mongoose
   .connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const common = require('../controllers/common.controllers')
+const common = require('../controllers/common.controller')
 
 /**
  * COMMON ROUTES
