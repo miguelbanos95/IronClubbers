@@ -8,8 +8,9 @@ const auth = require('../controllers/auth.controller');
 /**
  * COMMON ROUTES
  */
-router.get('/', parties.list) //***modificar***
-router.get('/register',)
+router.get('/', parties.list)
+router.get('/register')
+
 /**
  * Party Routes
  */
