@@ -15,13 +15,12 @@
   "version": "1.0.0",
   "description": "every plan you want! ",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -e hbs,js,css app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "seed": "node ./bin/seeds.js"
   },
   "author": "",
   "license": "ISC"
 }
- 

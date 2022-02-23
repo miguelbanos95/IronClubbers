@@ -23,7 +23,7 @@ const partySchema = new Schema({
         type: String,
         minlength: [10, 'Please enter at least 10 characters ']
       },
-      categories: {
+      musicTypes: {
         type: [String],
         default: ["Techno"]
       },
