@@ -5,11 +5,11 @@ const partySchema = new Schema({
     
     name: {
         type: String,
-        required: [true, "Name is required"]
+        required: [true, "Este campo es obligatorio"]
     },
     address: {
         type: String,
-        require:[true, "Address is required"]
+        require:[true, "Este campo es obligatorio"]
     },
     date: {
         type: Date,
@@ -21,7 +21,7 @@ const partySchema = new Schema({
       },
       description: {
         type: String,
-        minlength: [10, 'Please enter at least 10 characters ']
+        minlength: [10, 'este campo necesita al menos 10 caracteres ']
       },
       musicTypes: {
         type: [String],
@@ -29,7 +29,7 @@ const partySchema = new Schema({
       },
       capacity: {
         type: Number,
-        required: [true, 'What about capaciy, does not mean anuthing for you?' ]
+        required: [true, 'Introduzca un número entre 0 y 9999999' ]
       }
     }, { timestamps: true })
 

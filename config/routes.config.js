@@ -7,7 +7,7 @@ const parties = require('../controllers/party.controller');
 /**
  * COMMON ROUTES
  */
-router.get('/', parties.list) //***modificar***
+router.get('/', parties.list)
 /**
  * Party Routes
  */
