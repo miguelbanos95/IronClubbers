@@ -1,0 +1,83 @@
+{{#if edit }}
+  <form action="/parties/{{party.id}}/edit" method="POST">
+{{else}}
+  <form action="/parties" method="POST">
+{{/if}}
+  <div class="form-group mb-1">
+    <label for="name">Nombre del Evento</label>
+    <input name="name" type="text" class="form-control {{#if errors.name}}is-invalid{{/if}}" id="name" placeholder="Nombre"
+      value="{{ party.name }}">
+    {{#if errors.name}}
+      <div class="invalid-feedback">
+        {{errors.name.message}}
+      </div>
+    {{/if}}
+  </div>
+
+  <div class="form-group mb-1">
+    <label for="address">Dirección</label>
+    <input name="address" type="text" class="form-control {{#if errors.address}}is-invalid{{/if}}" id="address" placeholder="Dirección"
+      value="{{ party.address }}">
+    {{#if errors.address}}
+      <div class="invalid-feedback">
+        {{errors.address.message}}
+      </div>
+    {{/if}}
+  </div>
+
+  <div class="form-group mb-1">
+    <label for="date">Fecha del evento</label>
+    <input name="date" type="date" class="form-control {{#if errors.date}}is-invalid{{/if}}" id="date" 
+      value="{{ party.date }}">
+    {{#if errors.date}}
+      <div class="invalid-feedback">
+        {{errors.date.message}}
+      </div>
+    {{/if}}
+  </div>
+
+  <div class="form-group mb-1">
+    <label for="image">Imagen</label>
+    <input name="image" type="text" class="form-control {{#if errors.image}}is-invalid{{/if}}" id="image" placeholder="URL Imagen"
+      value="{{ party.image }}">
+    {{#if errors.image}}
+      <div class="invalid-feedback">
+        {{errors.image.message}}
+      </div>
+    {{/if}}
+  </div>
+
+  <div class="form-group mb-1">
+    <label for="text">Descripción</label>
+    <textarea name="description" type="text" class="form-control html-editor {{#if errors.description}}is-invalid{{/if}}" id="text"
+      placeholder="Descripción del evento" rows="10">{{ party.description }}</textarea>
+    {{#if errors.description}}<div class="invalid-feedback">{{errors.description}}</div>
+    {{/if}}
+  </div>
+
+  <div class="form-group mb-1">
+    <label for="capacity">Capacidad</label>
+    <input name="capacity" type="number" class="form-control {{#if errors.capacity}}is-invalid{{/if}}" id="capacity" placeholder="Enter capacity"
+      value="{{ party.capacity }}">
+    {{#if errors.capacity}}
+      <div class="invalid-feedback">
+        {{errors.capacity.message}}
+      </div>
+    {{/if}}
+  </div>
+
+  <div class="form-group mb-1">
+    <label for="musicTypes">Estilo de música</label>
+    <select class="form-select" name="musicTypes" show-labels multiple aria-label="MusicTypes" id="musicTypes">
+      {{#each musicTypes as |musicType|}}
+        <option
+          value="{{musicType}}"
+          {{#partyTypeMusic musicType = musicType party=../party}} selected {{/partyTypeMusic}} >
+          {{ musicType }}
+        </option>
+      {{/each}}
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+</form>

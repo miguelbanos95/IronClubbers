@@ -3,9 +3,9 @@
         "name": "Altr-Ego",
         "address": " P.º Bajo de la Virgen del Puerto, S/N, 28005 Madrid",
         "date": "2022-02-26",
-        "image": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.elfest.es%2Ffiles%2Fevents%2F41%2Fimage_4166_1_large.jpg&imgrefurl=https%3A%2F%2Fwww.elfest.es%2Fes%2Fmadrid%2Feventos%2Ffiestas%2Faltr-ego--carnaval&tbnid=eB80d5v4RHSS5M&vet=12ahUKEwi2mIOTuZH2AhVpAXcKHQjSAVUQMygBegQIARA8..i&docid=IoklSHpG7PmQfM&w=1080&h=608&q=altr-ego%20la%20riviera%20cartel&ved=2ahUKEwi2mIOTuZH2AhVpAXcKHQjSAVUQMygBegQIARA8",
+        "image": "https://images.xceed.me/events/banners/alter-ego-carnaval-madrid-xceed-33ac.jpg?w=920&ar=16:9&fm=auto",
         "description": "Esta gran sala emplazada en la ribera del Manzanares, que ha visto pasar cinco décadas de mágia nocturna, es hoy la sala donde más importantes y variados eventos se celebran en Madrid.",
-        "categories": "Melodic-Techno",
+        "musicTypes": "Melodic-Techno",
         "capacity": 500
 
     },
@@ -13,9 +13,9 @@
         "name": "Innellea in Mondo",
         "address": "c/ de Alcalá, 20, 28014 Madrid",
         "date": "2022-03-02",
-        "image": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fege.electronicgroove.com%2Fwp-content%2Fuploads%2F2019%2F12%2FInnellea-1.jpg&imgrefurl=https%3A%2F%2Fege.electronicgroove.com%2Fentrevista-innellea%2F&tbnid=1XhNgqruGB4rCM&vet=12ahUKEwiIn_r5uZH2AhVM6CoKHZmoCk4QMygEegQIARBD..i&docid=9onvzyXNS6t2IM&w=940&h=627&q=mondo%20innellea&ved=2ahUKEwiIn_r5uZH2AhVM6CoKHZmoCk4QMygEegQIARBD",
+        "image": "https://api.djmagla.com/wp-content/uploads/2019/07/Innellea.jpg",
         "description": "Esta gran sala emplazada en la ribera del Manzanares, que ha visto pasar cinco décadas de mágia nocturna, es hoy la sala donde más importantes y variados eventos se celebran en Madrid.",
-        "categories": "Melodic-Techno, Techno",
+        "musicTypes": "Melodic-Techno, Techno",
         "capacity": 150
 
     },
@@ -23,9 +23,9 @@
         "name": "Circoloco",
         "address": "Cta las salinas, km 1, 07818 Sant Josep de sa Talaia, Illes Balears",
         "date": "2022-05-02",
-        "image":"https://www.google.com/imgres?imgurl=https%3A%2F%2Fibizaglobalradio.com%2Fwp-content%2Fuploads%2F2022%2F02%2FScreenshot-2022-02-17-at-15.28.45.png&imgrefurl=https%3A%2F%2Fibizaglobalradio.com%2Fcircoloco-ibiza-announces-2022-opening-party%2F&tbnid=WX6LkxW4aUSvEM&vet=12ahUKEwjs_Za4upH2AhULNBoKHd9xDE8QMygBegUIARC4AQ..i&docid=lprpAVg9miC8hM&w=1346&h=1350&q=ibiza%20circoloco%202022&ved=2ahUKEwjs_Za4upH2AhULNBoKHd9xDE8QMygBegUIARC4AQ",
+        "image":"https://www.ibizarocks.com/wp-content/uploads/2019/04/slideshow-1553693080.jpg",
         "description": "DC10 apuesta por una música electrónica underground y de calidad. Circoloco es una de sus fiestas más conocidas donde podrás disfrutar de la mejor música techno, famosa por celebrarse todos los lunes del verano y por contar con Dj´s de primer nivel.",
-        "categories": " Melodic-Techno, Techno , Tech-House",
+        "musicTypes": " Melodic-Techno, Techno , Tech-House",
         "capacity": 1000
         
 
@@ -36,7 +36,7 @@
         "date": "2022-02-26",
         "image": "https://fever.imgix.net/plan/photo/f504215a-8346-11ec-b738-e6ee82312223.jpg?w=550&h=550&auto=format&fm=jpg",
         "description": "Te presentamos tu plan para carnaval... La mayor fiesta de disfraces de Madrid estará en Fabrik. Carnaval es #UniversiParty. ¿Qué te encontrarás? Música comercial de todos los estilos, performances y bailarines sobre el escenario y la animación más loca de la capital con concursos de baile, rondas de chupitos y muchas más sorpresas en el lugar que nunca falla... ¡Celebra en Fabrik que La vida es un carnaval!",
-        "categories": "Reggaeton",
+        "musicTypes": "Reggaeton",
         "capacity": 940
 
     },
@@ -46,7 +46,7 @@
         "date": "2022-04-02",
         "image": "http://www.clubbingspain.com/imagenes/flyer-260324506-1106993180062779-1023227542112953342-n-webp-4fnmjf4ffvuldn6.jpg",
         "description": "En una Jaima de lujo en el corazón del centro de Madrid, podrás escuchar a DJ Kagyu que nos estará deleitando con los místicos sonidos que se escuchan en Ibiza, Tulum y Mykonos.",
-        "categories": "Melodic-Techno",
+        "musicTypes": "Melodic-Techno",
         "capacity": 89
 
     }
