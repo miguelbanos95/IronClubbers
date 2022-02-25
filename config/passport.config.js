@@ -3,7 +3,7 @@ const LocalStrategy = require('passport-local').Strategy;
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const mongoose = require('mongoose');
 
-const User = require('../models/user.model');
+const User = require('../model/user.model');
 
 passport.serializeUser((user, next) => {
   next(null, user.id)
@@ -83,7 +83,7 @@ passport.use('google-auth', new GoogleStrategy(
         })
         .catch(err => next(err))
     } else {
-      next(null, false, { error: 'Error connecting to Google Auth' })
+      next(null, false, { error: 'Error de autentificación con Google' })
     }
   }
 ))

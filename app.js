@@ -25,9 +25,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(logger('dev'));
 
+app.use(sessionConfig);
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(sessionConfig);
 
 app.use((req, res, next) => {
     res.locals.currentUser = req.user;
