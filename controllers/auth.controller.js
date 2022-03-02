@@ -62,7 +62,7 @@ const login = (req, res, next, provider) => {
         if (loginError) {
           next(loginError)
         } else {
-          res.redirect('/parties')
+          res.redirect('/profile')
         }
       })
     }
@@ -81,8 +81,11 @@ module.exports.doLoginGoogle = (req, res, next) => {
   login(req, res, next, 'google-auth')
 }
 
-module.exports.logout = (req, res, next) => {
-  req.logout();
-  res.redirect('/login');
+module.exports.doLoginTwitter = (req, res, next) => {
+  login(req, res, next, 'twitter-auth')
 }
 
+module.exports.logout = (req, res, next) => {
+  req.logout();
+  res.redirect('/');
+}

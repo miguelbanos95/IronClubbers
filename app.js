@@ -9,6 +9,7 @@ const express = require('express');
 const logger = require('morgan');
 const path = require('path')
 const passport = require('passport');
+const ngrok = require('ngrok');
 
 require('./config/db.config');
 require('./config/hbs.config');
@@ -48,6 +49,18 @@ const router = require('./config/routes.config')
 app.use('/', router)
 
 
+app.get('/auth/twitter',
+ passport.authenticate('twitter-auth'));
+
+app.get('/auth/twitter/callback', 
+ passport.authenticate('twitter', { failureRedirect: '/login' }),
+ function(req, res) {
+     console.log('callback')
+   // Successful authentication, redirect home.
+   res.redirect('/');
+ });
+
+
 /**
  * Error Middlewares
  */
@@ -55,8 +68,9 @@ app.use('/', router)
 app.use((req, res, next) => {
     next(createError(404, 'Page not found'));
 });
+
 app.use((error, req, res, next) => {
-    console.log(error)
+    console.log('ERROR', error)
     let status = error.status || 500;
     res.status(status).render('error', {
         message: error.message,
@@ -68,6 +82,6 @@ app.use((error, req, res, next) => {
  * Port we are going to use
  */
 const port = Number(process.env.PORT || 3000);
-app.listen(port, () => {
+app.listen(port, async() => {
     console.log(`Ey! Your port ${port} is now available!`);
 });
