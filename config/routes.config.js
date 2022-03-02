@@ -10,6 +10,8 @@ const auth = require('../controllers/auth.controller');
  */
 router.get('/', parties.list) //***modificar***
 router.get('/register',)
+router.get('/terms', common.terms)
+router.get('/policy-privacy', common.policyPrivacy)
 /**
  * Party Routes
  */

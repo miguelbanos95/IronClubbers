@@ -6,8 +6,9 @@ module.exports.list = (req, res, next) => {
     
   Party.find()
     .sort({ createdAt: 'desc' })
-    .limit(9)
-    .then((parties) => res.render('common/home', { parties }))
+    .then((parties) => {
+      res.render('common/home', { parties })
+    })
     .catch((error) => next(error));
 };
 
@@ -38,12 +39,18 @@ module.exports.doCreate = (req, res, next) => {
 
   const party = new Party({
     name: req.body.name,
+    place: req.body.place,
     address: req.body.address,
+    start: req.body.start,
+    end: req.body.end,
     date: req.body.date,
+    ticketTime: req.body.ticketTime,
     image: req.body.image || undefined,
     description: req.body.description,
     musicTypes: partyTypeMusic,
+    type: req.body.type,
     capacity: req.body.capacity,
+    price: req.body.price
     
   });
 
