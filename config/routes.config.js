@@ -16,9 +16,15 @@ const GOOGLE_SCOPES = [
 /**
  * COMMON ROUTES
  */
-router.get('/', parties.list)
+
 
 router.get('/profile', authMiddleware.isAuthenticated, user.profile)
+
+router.get('/', parties.list) //***modificar***
+router.get('/register',)
+router.get('/terms', common.terms)
+router.get('/policy-privacy', common.policyPrivacy)
+
 
 /**
  * Party Routes

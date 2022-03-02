@@ -2,24 +2,61 @@
 
   <h2 class="c-dark-gray font-weight-semi mb-4">Detalle del evento</h2>
 
-  <div class="row mx-auto bg-white mx-auto mb-4">
+  <div class="row mx-auto bg-dark mx-auto mb-4">
+
     <div class="col-md-4 col-sm-12 py-2">
-      <img src="{{party.image}}" class="w-100 rounded border"/>
+      <img src="{{party.image}}" class="w-100 rounded border" />
     </div>
 
     <div class="col-md-6 col-sm-12 py-2">
       <h3 class="font-weight-semi">{{party.name}}</h3>
+      <h2>UBICACION</h2>
       <p class="card-address">
-        <span class="pe-1">
-          <i class="fa fa-map-pin"></i>
-        </span>{{party.address}}</p>
+        📍 {{party.address}}
+      </p>
+    </div>
 
+    <div>
+      <h2>Tickets</h2>
+      <p>💳 Entrada general + 2 consumiciones hasta las {{party.ticketTime}}, luego puedes acceder pero sin consumiciones</p>
+    </div>
+
+    <div id="events-container">
+      <h2>Que vas a disfrutar</h2>
+      <p>🔥 {{party.venueType}}</p>
+      <p>🎉 ...</p>
+      <p>🎵 ...</p>
+      <p>🎙 ...</p>
+    </div>
+
+    <div>
+      <h2>Información</h2>
+      <p>📅 Fecha: {{#dateHelper date = party.date}}{{/dateHelper}}</p>
+      <p>🕒 Horario: de {{party.start}} a {{party.end}}</p>
+      <p>📍 Lugar: {{party.place}} </p>
+      <p>😷 Es obligatorio el uso de mascarilla en todo momento</p>
+      {{!-- <p>🏠 {{}} se reserva el derecho de admisión</p> --}}
+      <p>🔞 Prohibido la venta a menores de 18 años</p>
+    </div>
+
+    <div>
+      <h2>Line Up</h2>
+      <p>...</p>
+    </div>
+
+
+
+    <div>
+      <h2>DESCRIPCIÓN</h2>
       <p>{{{party.description}}}</p>
     </div>
-    <div>
-      {{#each party.musicTypes as |musicType|}}
-        <p>{{musicType}}</p>
-      {{/each}}
-    </div>
+
+
+    <h2>ESTILOS</h2>
+    {{#each party.musicTypes as |musicType|}}
+    <p>{{musicType}}</p>
+    {{/each}}
+
   </div>
 </div>
+
