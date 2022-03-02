@@ -18,6 +18,7 @@ const GOOGLE_SCOPES = [
  */
 router.get('/', parties.list)
 
+router.get('/profile', authMiddleware.isAuthenticated, user.profile)
 
 /**
  * Party Routes
@@ -44,6 +45,19 @@ router.get('/logout', auth.logout)
 router.get('/login/google', passport.authenticate('google-auth', { scope: GOOGLE_SCOPES }))
 router.get('/auth/google/callback', auth.doLoginGoogle)
 
-router.get('/profile', authMiddleware.isAuthenticated, user.profile)
+/**
+ * AUTH ROUTES TWITTER
+ */
+//  router.get('/auth/twitter',
+//  passport.authenticate('twitter-auth'));
+
+// router.get('/auth/twitter/callback', 
+//  passport.authenticate('twitter', { failureRedirect: '/login' }),
+//  function(req, res) {
+//      console.log('callback')
+//    // Successful authentication, redirect home.
+//    res.redirect('/');
+//  });
+
 
 module.exports = router

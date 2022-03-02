@@ -2,7 +2,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const mongoose = require('mongoose');
-
+// const TwitterStrategy = require('passport-twitter').Strategy;
 const User = require('../model/user.model');
 
 passport.serializeUser((user, next) => {
@@ -53,12 +53,12 @@ passport.use('google-auth', new GoogleStrategy(
     callbackURL: '/auth/google/callback'
   },
   (accessToken, refreshToken, profile, next) => {
-    console.log({ profile });
+    
 
     const googleID = profile.id;
     const email = profile.emails[0] ? profile.emails[0].value : undefined;
     const name = profile.displayName;
-
+    console.log()
     if (googleID && email) {
       User.findOne({
         $or: [
@@ -66,24 +66,39 @@ passport.use('google-auth', new GoogleStrategy(
           { email }
         ]
       })
-        .then(user => {
+        .then((user) => {
           if (user) {
             next(null, user)
           } else {
-            return User.create({
+            User.create({
               email,
               googleID,
               password: mongoose.Types.ObjectId(),
-              name
+              name,
+              image: profile.photos[0].value
             })
-              .then(createdUser => {
-                next(null, createdUser)
-              })
+            .then(createdUser => {
+              next(null, createdUser)
+            })
           }
         })
         .catch(err => next(err))
     } else {
-      next(null, false, { error: 'Error de autentificación con Google' })
+      next(null, false, { error: 'Error connecting to Google Auth' })
     }
   }
 ))
+
+// passport.use('twitter-auth',new TwitterStrategy({
+//   consumerKey: process.env.TWITTER_CONSUMER_KEY,
+//   consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
+//   callbackURL: "auth/twitter/callback"
+// },
+// function(token, tokenSecret, profile, cb) {
+//   console.log('entro')
+//   User.findOrCreate({ twitterId: profile.id }, function (err, user) {
+//     return cb(err, user);
+//   });
+// }
+// ));
+
