@@ -33,3 +33,24 @@ hbs.registerHelper('dateHelper', function (val) {
     let month = months[dateParsed.getMonth()]
     return `${dateParsed.getDate()} de ${month} de ${dateParsed.getFullYear()}`
 })
+
+hbs.registerHelper('eachCarrusell', function (arr, options) {
+  console.log(options)
+  let newArr = arr.reduce((acc, el, index) => {
+    let chunkIndex = Math.floor(index/3)
+    if(!acc[chunkIndex]) {
+      acc[chunkIndex] = []
+    }
+    
+    acc[chunkIndex].push(el)
+    return acc
+  }, []).map((el, i) => {
+    return options.fn(el)
+  })
+
+  // let results = []
+  // for (let i = 0; i < newArr.length; i++){
+  //   results.push(options.fn(newArr[i]));
+  // }
+  return newArr.join('')
+})
