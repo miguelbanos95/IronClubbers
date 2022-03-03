@@ -9,7 +9,6 @@ const express = require('express');
 const logger = require('morgan');
 const path = require('path')
 const passport = require('passport');
-const ngrok = require('ngrok');
 
 require('./config/db.config');
 require('./config/hbs.config');

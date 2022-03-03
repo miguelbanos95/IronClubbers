@@ -13,17 +13,13 @@ mongoose.connection.once('open', () => {
     .dropDatabase()
     .then(() => `O.o! ${mongoose.connection.db.databaseName} dropped!`)
     .then(() => {
-      return Party.create(parties)
-        .then((createdParties) => createdParties.forEach(party => console.log(party)))
-    })
-    .then(() => {
       parties.forEach(party => {
         new Party({
           ...party,
           price: Math.floor(Math.random() * 100 + 10),
           capacity: Math.floor(Math.random() * 100 + 10),
         }).save()
-          .then(rest => console.log(`${rest.name} has been created!`))
+          .then(rest => console.log(rest))
           .catch(err => console.error(err))
       })
     })
