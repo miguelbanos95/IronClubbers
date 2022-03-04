@@ -149,15 +149,13 @@
         "image": "https://fever.imgix.net/plan/photo/d0fc71ae-8990-11ec-b294-e265ca2a7715?w=550&h=550&auto=format&fm=jpg",
         "description": "¡CODE está de vuelta! Save the date porque el 19 de marzo te esperan nada menos que 12 de horas de fiesta ¡sin parar! La sesión techno más potente de la capital vuelve a poner el techno en el lugar que se merece. Artistas punteros del underground mundial como Oscar Mulero, Fatima Hajji, Jeff Mills o Dax J, se darán cita en un evento que volverá a contar con las cinco áreas de Fabrik abiertas para que lo des todo sin descanso.",
         "musicTypes": "Techno",
-        "capacity": 1150,
         "Djs": {
             "dj1": "Oscar Mulero",
             "dj2": "Fatima Hajji",
             "dj3": "Jeff Mills",
             "dj4": "Dax J",
             "dj5": "¡Y más por confirmar!"
-        },
-        "price": 27
+        }
     },
     {
         "name": "150",
@@ -171,7 +169,6 @@
         "image": "https://fever.imgix.net/plan/photo/eab6e382-8b47-11ec-9017-760afc7b5e3c.png?w=550&h=550&auto=format&fm=jpg",
         "description": "¡Nuevo evento HARDSTYLE en Fabrik! 150 regresa en marzo, un mes más, con un cartel que vuelve a traer a Madrid a los artistas más contundentes de la música hardstyle, hardcore y todas sus variantes. El día 12 de marzo tendremos una cita de las importantes para los amantes de los BPMs altos, con un elenco que se dividirá de nuevo en tres áreas con más de ocho horas de música y diversión.",
         "musicTypes": "Hardstyle",
-        "capacity": 950,
         "Djs": {
             "dj1": "Bass Modulators",
             "dj2": "Frequencerz",
@@ -181,8 +178,7 @@
             "dj6": "Ncrypta",
             "dj7": "Re-Style",
             "dj8": "Tha Playah"
-        },
-        "price": 20
+        }
     },
     {
         "name": "Andrés Campo en Ekho Club en La Riviera + copa",
@@ -199,8 +195,7 @@
         "capacity": 1,
         "Djs": {
             "dj1": "Andrés Campos"
-        },
-        "price": 22
+        }
     },
     {
         "name": "Makineros 90’s llega a Fabrik",
@@ -224,8 +219,7 @@
             "dj7": "Paul Elstak",
             "dj8": "Neophyte",
             "dj9": "Miguel Serna"
-        },
-        "price": 22
+        }
     },
     {
         "name": "VG Fuenlabrada presenta I Love Reggaeton ¡con dos copas!",
@@ -242,76 +236,9 @@
         "capacity": 150,
         "Djs": {
             "dj1": "DJ Cali"
-        },
-        "price": 20
-    },
-    {
-        "name": "",
-        "venueType": "",
-        "place": "",
-        "address": "",
-        "start": "00:00",
-        "end": "06:00",
-        "date": "2022-",
-        "ticketTime": "",
-        "image": "",
-        "description": "",
-        "musicTypes": "",
-        "capacity": 150,
-        "Djs": {
-            "dj1": "",
-            "dj2": "",
-            "dj3": "",
-            "dj4": "",
-            "dj5": "",
-            "dj6": ""
-        },
-        "price": 20
-    },
-    {
-        "name": "",
-        "venueType": "",
-        "place": "",
-        "address": "",
-        "start": "00:00",
-        "end": "06:00",
-        "date": "2022-",
-        "ticketTime": "",
-        "image": "",
-        "description": "",
-        "musicTypes": "",
-        "capacity": 150,
-        "Djs": {
-            "dj1": "",
-            "dj2": "",
-            "dj3": "",
-            "dj4": "",
-            "dj5": "",
-            "dj6": ""
-        },
-        "price": 20
-    },
-    {
-        "name": "",
-        "venueType": "",
-        "place": "",
-        "address": "",
-        "start": "00:00",
-        "end": "06:00",
-        "date": "2022-",
-        "ticketTime": "",
-        "image": "",
-        "description": "",
-        "musicTypes": "",
-        "capacity": 150,
-        "Djs": {
-            "dj1": "",
-            "dj2": "",
-            "dj3": "",
-            "dj4": "",
-            "dj5": "",
-            "dj6": ""
-        },
-        "price": 20
+        }
     }
 ]
+
+
+   
