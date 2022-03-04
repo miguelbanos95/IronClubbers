@@ -7,10 +7,12 @@ const SALT_ROUNDS = 10;
 
 const userSchema = new mongoose.Schema({
 
-  name:{
-    type: String
+  name: {
+    type: String,
+    required: 'este campo es obligatorio',
+    minLength: [3, 'este campo necesita al menos 3 caracteres']
   },
-  
+
   email: {
     type: String,
     required: 'este campo es obligatorio',
