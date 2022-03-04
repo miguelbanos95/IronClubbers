@@ -6,6 +6,7 @@ const auth = require('../controllers/auth.controller');
 const user = require('../controllers/user.controller')
 const passport = require('passport')
 const authMiddleware = require('../middlewares/auth.middlewares')
+const upload = require('../config/storage.config');
 
 
 
@@ -21,7 +22,6 @@ const GOOGLE_SCOPES = [
 router.get('/profile', authMiddleware.isAuthenticated, user.profile)
 
 router.get('/', parties.list) //***modificar***
-router.get('/register',)
 router.get('/terms', common.terms)
 router.get('/policy-privacy', common.policyPrivacy)
 
@@ -40,7 +40,8 @@ router.post('/parties/:id/delete', parties.delete);
  * AUTH ROUTES 
  */
 router.get('/register', auth.register)
-router.post('/register', auth.doRegister)
+router.get('/register-with-email', auth.registerLocal)
+router.post('/register', upload.single('image'), auth.doRegisterLocal)
 router.get('/login', auth.login)
 router.post('/login', auth.doLogin)
 router.get('/logout', auth.logout)
