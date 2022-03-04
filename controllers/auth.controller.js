@@ -5,12 +5,14 @@ const passport = require('passport')
 module.exports.register = (req, res, next) => {
   res.render('auth/register')
 }
-
-module.exports.doRegister = (req, res, next) => {
+module.exports.registerLocal = (req, res, next) => {
+  res.render('auth/register-with-email')
+}
+module.exports.doRegisterLocal = (req, res, next) => {
   const user = req.body;
 
   const renderWithErrors = (errors) => {
-    res.render('auth/register', { errors, user })
+    res.render('auth/register-with-email', { errors, user })
   }
 
   User.findOne({ email: user.email })
@@ -22,11 +24,11 @@ module.exports.doRegister = (req, res, next) => {
           user.image = req.file.path
         }
         return User.create(user)
-          .then((createdUser) => {
-            mailer.sendActivationEmail(createdUser.email, createdUser.activationToken)
-            res.redirect('/login')
+          // .then((createdUser) => {
+          //   mailer.sendActivationEmail(createdUser.email, createdUser.activationToken)
+          .then(() => {
+            res.redirect('/profile')
           })
-
       }
     })
     .catch(err => {

@@ -49,17 +49,6 @@ const router = require('./config/routes.config')
 app.use('/', router)
 
 
-app.get('/auth/twitter',
- passport.authenticate('twitter-auth'));
-
-app.get('/auth/twitter/callback', 
- passport.authenticate('twitter', { failureRedirect: '/login' }),
- function(req, res) {
-     console.log('callback')
-   // Successful authentication, redirect home.
-   res.redirect('/');
- });
-
 
 /**
  * Error Middlewares
