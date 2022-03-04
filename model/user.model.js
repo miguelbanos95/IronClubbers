@@ -6,6 +6,10 @@ const PASSWORD_PATTERN = /^.{8,}$/i;
 const SALT_ROUNDS = 10;
 
 const userSchema = new mongoose.Schema({
+
+  name:{
+    type: String
+  },
   
   email: {
     type: String,
