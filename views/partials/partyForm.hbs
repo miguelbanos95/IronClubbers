@@ -1,83 +1,170 @@
 {{#if edit }}
-  <form action="/parties/{{party.id}}/edit" method="POST">
-{{else}}
+<form action="/parties/{{party.id}}/edit" method="POST">
+  {{else}}
   <form action="/parties" method="POST">
-{{/if}}
-  <div class="form-group mb-1">
-    <label for="name">Nombre del Evento</label>
-    <input name="name" type="text" class="form-control {{#if errors.name}}is-invalid{{/if}}" id="name" placeholder="Nombre"
-      value="{{ party.name }}">
-    {{#if errors.name}}
+    {{/if}}
+    <div class="form-group mb-1">
+      <label for="name">Nombre del Evento</label>
+      <input name="name" type="text" class="form-control {{#if errors.name}}is-invalid{{/if}}" id="name"
+        placeholder="Nombre" value="{{ party.name }}">
+      {{#if errors.name}}
       <div class="invalid-feedback">
         {{errors.name.message}}
       </div>
-    {{/if}}
-  </div>
+      {{/if}}
+    </div>
 
-  <div class="form-group mb-1">
-    <label for="address">Dirección</label>
-    <input name="address" type="text" class="form-control {{#if errors.address}}is-invalid{{/if}}" id="address" placeholder="Dirección"
-      value="{{ party.address }}">
-    {{#if errors.address}}
+    <div class="form-group mb-1">
+      <label for="address">Dirección</label>
+      <input name="address" type="text" class="form-control {{#if errors.address}}is-invalid{{/if}}" id="address"
+        placeholder="Dirección" value="{{ party.address }}">
+      {{#if errors.address}}
       <div class="invalid-feedback">
         {{errors.address.message}}
       </div>
-    {{/if}}
-  </div>
+      {{/if}}
+    </div>
+    <div class="form-group mb-1">
+      <label for="place">Lugar</label>
+      <input name="place" type="text" class="form-control {{#if errors.place}}is-invalid{{/if}}" id="place"
+        placeholder="Lugar" value="{{ party.place }}">
+      {{#if errors.place}}
+      <div class="invalid-feedback">
+        {{errors.place.message}}
+      </div>
+      {{/if}}
+    </div>
 
-  <div class="form-group mb-1">
-    <label for="date">Fecha del evento</label>
-    <input name="date" type="date" class="form-control {{#if errors.date}}is-invalid{{/if}}" id="date" 
-      value="{{ party.date }}">
-    {{#if errors.date}}
+    <div class="form-group mb-1">
+      <label for="date">Fecha del evento</label>
+      <input name="date" type="date" class="form-control {{#if errors.date}}is-invalid{{/if}}" id="date"
+        value="{{ party.date }}">
+      {{#if errors.date}}
       <div class="invalid-feedback">
         {{errors.date.message}}
       </div>
-    {{/if}}
-  </div>
+      {{/if}}
+    </div>
+    <div class="form-group mb-1">
+      <label for="start">Hora de apertura</label>
+      <input type="time" id="appt" name="start" min="00:00" max="23:59"
+        class="form-control mx-1 {{#if errors.start}}is-invalid{{/if}}" id="start" value="{{ party.start }}">
+      {{#if errors.start}}
+      <div class="invalid-feedback">
+        {{errors.start.message}}
+      </div>
+      {{/if}}
+    </div>
+    <div class="form-group mb-1">
 
-  <div class="form-group mb-1">
-    <label for="image">Imagen</label>
-    <input name="image" type="text" class="form-control {{#if errors.image}}is-invalid{{/if}}" id="image" placeholder="URL Imagen"
-      value="{{ party.image }}">
-    {{#if errors.image}}
+      <label for="end">Hora de cierre</label>
+      <input type="time" id="appt" name="end" min="00:00" max="23:59"
+        class="form-control mx-1 {{#if errors.end}}is-invalid{{/if}}" id="end" value="{{ party.end }}">
+      {{#if errors.end}}
+      <div class="invalid-feedback">
+        {{errors.end.message}}
+      </div>
+      {{/if}}
+    </div>
+
+    <div class="form-group mb-1">
+      <label for="image">Imagen</label>
+      <input name="image" type="text" class="form-control {{#if errors.image}}is-invalid{{/if}}" id="image"
+        placeholder="URL Imagen" value="{{ party.image }}">
+      {{#if errors.image}}
       <div class="invalid-feedback">
         {{errors.image.message}}
       </div>
-    {{/if}}
-  </div>
+      {{/if}}
+    </div>
 
-  <div class="form-group mb-1">
-    <label for="text">Descripción</label>
-    <textarea name="description" type="text" class="form-control html-editor {{#if errors.description}}is-invalid{{/if}}" id="text"
-      placeholder="Descripción del evento" rows="10">{{ party.description }}</textarea>
-    {{#if errors.description}}<div class="invalid-feedback">{{errors.description}}</div>
-    {{/if}}
-  </div>
+    <div class="form-group mb-1">
+      <label for="text">Descripción</label>
+      <textarea name="description" type="text"
+        class="form-control html-editor {{#if errors.description}}is-invalid{{/if}}" id="text"
+        placeholder="Descripción del evento" rows="10">{{ party.description }}</textarea>
+      {{#if errors.description}}<div class="invalid-feedback">{{errors.description}}</div>
+      {{/if}}
+    </div>
+    <div class="form-group mb-1">
+      <label for="ticketTime">Promoción copa valida hasta:</label>
+      <input type="time" id="appt" name="ticketTime" min="00:00" max="23:59"
+        class="form-control mx-1 {{#if errors.ticketTime}}is-invalid{{/if}}" id="ticketTime"
+        value="{{ party.ticketTime }}">
+      {{#if errors.ticketTime}}
+      <div class="invalid-feedback">
+        {{errors.ticketTime.message}}
+      </div>
+      {{/if}}
+    </div>
 
-  <div class="form-group mb-1">
-    <label for="capacity">Capacidad</label>
-    <input name="capacity" type="number" class="form-control {{#if errors.capacity}}is-invalid{{/if}}" id="capacity" placeholder="Enter capacity"
-      value="{{ party.capacity }}">
-    {{#if errors.capacity}}
+    <div class="form-group mb-1">
+      <label for="capacity">Capacidad</label>
+      <input name="capacity" type="number" class="form-control {{#if errors.capacity}}is-invalid{{/if}}" id="capacity"
+        placeholder="Enter capacity" value="{{ party.capacity }}">
+      {{#if errors.capacity}}
       <div class="invalid-feedback">
         {{errors.capacity.message}}
       </div>
-    {{/if}}
-  </div>
+      {{/if}}
+    </div>
 
-  <div class="form-group mb-1">
-    <label for="musicTypes">Estilo de música</label>
-    <select class="form-select" name="musicTypes" show-labels multiple aria-label="MusicTypes" id="musicTypes">
-      {{#each musicTypes as |musicType|}}
-        <option
-          value="{{musicType}}"
-          {{#partyTypeMusic musicType = musicType party=../party}} selected {{/partyTypeMusic}} >
+    <div class="form-group mb-1">
+      <label for="price">Precio</label>
+      <input name="price" type="number" class="form-control {{#if errors.price}}is-invalid{{/if}}" id="price"
+        placeholder="Precio" value="{{ party.price }}">
+      {{#if errors.price}}
+      <div class="invalid-feedback">
+        {{errors.price.message}}
+      </div>
+      {{/if}}
+    </div>
+    <form onsubmit="return false;">
+      <div class="form-group mb-1">
+        <label for="input" class="col-2 col-form-label">Tags</label>
+        <div class="col-10 form-control">
+          <input type="text" name="input" class="text-muted border-0" placeholder="Pulsa espacio">
+        </div>
+      </div>
+      {{!-- <div class="form-group text-right">
+        <button type="submit" class="btn btn-secondary">Submit</button>
+      </div> --}}
+    </form>
+
+    <div class="form-group mb-1">
+      <label for="musicTypes">Estilo de música</label>
+      <select class="form-select" name="musicTypes" show-labels multiple aria-label="MusicTypes" id="musicTypes">
+        {{#each musicTypes as |musicType|}}
+        <option value="{{musicType}}" {{#partyTypeMusic musicType=musicType party=../party}} selected
+          {{/partyTypeMusic}}>
           {{ musicType }}
         </option>
-      {{/each}}
-    </select>
-  </div>
+        {{/each}}
+      </select>
+    </div>
 
-  <button type="submit" class="btn btn-primary">Enviar solicitud</button>
-</form>
+    <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+  </form>
+
+  <script src="/js/multitagJquery.js"></script>
+
+  <script>
+    // http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/
+
+    $(document).ready(function () {
+
+      $('input[name="input"]').tagsinput({
+        trimValue: true,
+        confirmKeys: [13, 44, 32],
+        focusClass: 'my-focus-class'
+      });
+
+      $('.bootstrap-tagsinput input').on('focus', function () {
+        $(this).closest('.bootstrap-tagsinput').addClass('has-focus');
+      }).on('blur', function () {
+        $(this).closest('.bootstrap-tagsinput').removeClass('has-focus');
+      });
+
+    });
+
+  </script>
