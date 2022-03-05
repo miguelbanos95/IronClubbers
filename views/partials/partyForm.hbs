@@ -98,6 +98,19 @@
       {{/if}}
     </div>
 
+
+    <div>
+      <div class="form-group mb-1">
+        <label for="add-dj">Artista/s</label>
+        <div class="d-flex">
+          <input class="form-control me-1" id="add-dj" type="text">
+          <button id="add-dj-btn" class="btn btn-secondary">Añadir</button>
+        </div>
+      </div>
+      <ul id="djs-added"></ul>
+      <input class="no-vissible" id="djs-list-input" type="text" name="djs">
+    </div>
+
     <div class="form-group mb-1">
       <label for="capacity">Capacidad</label>
       <input name="capacity" type="number" class="form-control {{#if errors.capacity}}is-invalid{{/if}}" id="capacity"
@@ -160,6 +173,24 @@
         $(this).closest('.bootstrap-tagsinput').removeClass('has-focus');
       });
 
+      const addDjBtn = document.getElementById('add-dj-btn');
+      const djsInput = document.getElementById('add-dj');
+      const djsList = document.getElementById('djs-added');
+      const djsListInput = document.getElementById('djs-list-input');
+
+      addDjBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        const newDj = djsInput.value;
+        djsInput.value = '';
+
+        djsListInput.value = `${djsListInput.value}${djsListInput.value ? ',' : ''}${newDj}`;
+
+        const djNode = document.createElement('li');
+        djNode.innerHTML = newDj;
+
+        djsList.appendChild(djNode);
+      })
     });
 
   </script>

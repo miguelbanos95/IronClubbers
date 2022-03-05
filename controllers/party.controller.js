@@ -38,8 +38,6 @@ module.exports.doCreate = (req, res, next) => {
     partyTypeMusic = [partyTypeMusic]
   }
 
-  console.log('********** ', req.body.tags.split(','))
-
   const party = new Party({
     name: req.body.name,
     place: req.body.place,
@@ -54,7 +52,7 @@ module.exports.doCreate = (req, res, next) => {
     tags: req.body.tags.split(','),
     capacity: req.body.capacity,
     price: req.body.price,
-    djs: req.body.djs
+    djs: req.body.djs?.split(',')
   });
 
 

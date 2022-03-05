@@ -68,3 +68,13 @@
 .bootstrap-tagsinput .tag [data-role="remove"]:after {
 	content: '\00d7';
 }
+
+.no-vissible {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+#add-dj-btn{
+    height: 39px;
+}
