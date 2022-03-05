@@ -3,7 +3,7 @@ const Party = require('../model/party.model');
 const musicTypes = Object.keys(require('../data/musicTypes.json'));
 
 module.exports.list = (req, res, next) => {
-    
+
   Party.find()
     .sort({ createdAt: 'desc' })
     .then((parties) => {
@@ -17,13 +17,13 @@ module.exports.detail = (req, res, next) => {
     .then((party) => {
       if (party) {
         console.log(party)
-        res.render('parties/details', { party });  
+        res.render('parties/details', { party });
       } else {
         res.redirect('/parties');
       }
     })
     .catch(error => next(error));
-};   
+};
 
 module.exports.create = (req, res, next) => {
   res.render('parties/create', {
@@ -38,6 +38,8 @@ module.exports.doCreate = (req, res, next) => {
     partyTypeMusic = [partyTypeMusic]
   }
 
+  console.log('********** ', req.body.tags.split(','))
+
   const party = new Party({
     name: req.body.name,
     place: req.body.place,
@@ -49,7 +51,7 @@ module.exports.doCreate = (req, res, next) => {
     image: req.body.image || undefined,
     description: req.body.description,
     musicTypes: partyTypeMusic,
-    tags: req.body.tags,
+    tags: req.body.tags.split(','),
     capacity: req.body.capacity,
     price: req.body.price,
     djs: req.body.djs

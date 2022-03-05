@@ -119,17 +119,12 @@
       </div>
       {{/if}}
     </div>
-    <form onsubmit="return false;">
-      <div class="form-group mb-1">
-        <label for="input" class="col-2 col-form-label">Tags</label>
-        <div class="col-10 form-control">
-          <input type="text" name="input" class="text-muted border-0" placeholder="Pulsa espacio">
-        </div>
+    <div class="form-group mb-1">
+      <label for="tags" class="col-2 col-form-label">Tags</label>
+      <div class="col-10 form-control">
+        <input type="text" name="tags" class="text-muted border-0" placeholder="Pulsa espacio">
       </div>
-      {{!-- <div class="form-group text-right">
-        <button type="submit" class="btn btn-secondary">Submit</button>
-      </div> --}}
-    </form>
+    </div>
 
     <div class="form-group mb-1">
       <label for="musicTypes">Estilo de música</label>
@@ -153,7 +148,7 @@
 
     $(document).ready(function () {
 
-      $('input[name="input"]').tagsinput({
+      $('input[name="tags"]').tagsinput({
         trimValue: true,
         confirmKeys: [13, 44, 32],
         focusClass: 'my-focus-class'
