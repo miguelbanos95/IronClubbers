@@ -47,7 +47,6 @@ hbs.registerHelper('eachCarrusell', function (arr, options) {
   }, []).map((el, i) => {
     return options.fn(el)
   })
-
   // let results = []
   // for (let i = 0; i < newArr.length; i++){
   //   results.push(options.fn(newArr[i]));

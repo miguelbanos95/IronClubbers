@@ -116,39 +116,32 @@
         <div class="row mx-auto">
 
             {{#each parties as |party|}}
-            
-            <div class="col-xl-3 col-sm-6 col-xs-12 gy-4 d-flex align-items-stretch">
-                <div id="cards-style" class="card w-100 bg-secondary" style="width: 18rem">
+
+            <div class="col-xl-3 col-sm-6 col-xs-12 gy-4 d-flex align-items">
+            <a id="link-cards" href="/parties/{{party.id}}" style="text-decoration: none">
+                <div id="cards-style" class="card w-100 h-90 bg-secondary" style="width: 18rem">
                     <div class="position-relative">
                         <img src="{{party.image}}" class="card-img-top" style="height:220px;" alt="...">
                         <div class="like-button">
                             <i class="fa fa-heart"></i>
                         </div>
                     </div>
-                    <div class="card-body d-flex flex-column mt-2">
+                    <div class="card-body row flex-column mt-2">
                         <h5 class="card-title">{{party.name}}</h5>
-                        <small class="card-text text-small mb-1">📍 {{party.place}}</small>
-                        {{!-- <small class="card-text text-small mb-1">🎵 Tipo de música:
-                            {{party.musicTypes}}</small>
-                        --}}
-                        <small class="card-text text-small mb-1">📅 {{#dateHelper date =
-                            party.date}}{{/dateHelper}}</small>
+                        {{!-- <h6><small class="card-text text-small mb-1">📍 {{party.place}}</small></h6>
+                        <h6><small class="card-text text-small mb-1">📅 {{#dateHelper date =
+                            party.date}}{{/dateHelper}}</small></h6> --}}
                         <small class="card-text text-small mb-1">💸 {{party.price}}€</small>
                         <div class="d-flex justify-content-between">
-                            <a href="/parties/{{party.id}}" class="btn btn-primary">Más detalles</a>
                             <a href="/parties/{{party.id}}/edit" class="btn btn-success">Editar</a>
-                        </div>
+                        </div> 
                     </div>
-
                 </div>
             </div>
+            </a>
             {{/each}}
-
-
         </div>
     </div>
-
-
 </div>
 
 
