@@ -86,6 +86,7 @@
       {{#if errors.description}}<div class="invalid-feedback">{{errors.description}}</div>
       {{/if}}
     </div>
+
     <div class="form-group mb-1">
       <label for="ticketTime">Promoción copa valida hasta:</label>
       <input type="time" id="appt" name="ticketTime" min="00:00" max="23:59"
@@ -97,7 +98,6 @@
       </div>
       {{/if}}
     </div>
-
 
     <div>
       <div class="form-group mb-1">
@@ -132,6 +132,7 @@
       </div>
       {{/if}}
     </div>
+
     <div class="form-group mb-1">
       <label for="tags" class="col-2 col-form-label">Tags</label>
       <div class="col-10 form-control">
@@ -155,7 +156,6 @@
   </form>
 
   <script src="/js/multitagJquery.js"></script>
-
   <script>
     // http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/
 
@@ -192,5 +192,4 @@
         djsList.appendChild(djNode);
       })
     });
-
   </script>
