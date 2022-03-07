@@ -19,9 +19,7 @@ const GOOGLE_SCOPES = [
  */
 
 
-router.get('/profile', authMiddleware.isAuthenticated, user.profile)
-
-router.get('/', parties.list) //***modificar***
+router.get('/', parties.list) 
 router.get('/terms', common.terms)
 router.get('/policy-privacy', common.policyPrivacy)
 
@@ -30,19 +28,21 @@ router.get('/policy-privacy', common.policyPrivacy)
  * Party Routes
  */
 router.get('/parties', parties.list);
-router.get('/parties/create', parties.create);
+router.get('/parties/results', parties.results)
+router.get('/parties/create',authMiddleware.isAuthenticated, parties.create);
 router.get('/parties/:id', parties.detail);
-router.post('/parties', parties.doCreate);
-router.get('/parties/:id/edit', parties.edit);
-router.post('/parties/:id/edit', parties.doEdit);
-router.post('/parties/:id/delete', parties.delete);
+router.post('/parties', authMiddleware.isAuthenticated, parties.doCreate);
+router.get('/parties/:id/edit', authMiddleware.isAuthenticated, parties.edit);
+router.post('/parties/:id/edit', authMiddleware.isAuthenticated, parties.doEdit);
+router.post('/parties/:id/delete', authMiddleware.isAuthenticated, parties.delete);
 /**
  * AUTH ROUTES 
  */
+
 router.get('/register', auth.register)
+router.get('/login', auth.login)
 router.get('/register-with-email', auth.registerLocal)
 router.post('/register', upload.single('image'), auth.doRegisterLocal)
-router.get('/login', auth.login)
 router.post('/login', auth.doLogin)
 router.get('/logout', auth.logout)
 
@@ -65,6 +65,10 @@ router.get('/auth/google/callback', auth.doLoginGoogle)
 //    // Successful authentication, redirect home.
 //    res.redirect('/');
 //  });
+
+/* User routes*/
+router.get('/profile', authMiddleware.isAuthenticated, user.profile)
+router.post('/like/:id', authMiddleware.isAuthenticated, user.doLike)
 
 
 module.exports = router

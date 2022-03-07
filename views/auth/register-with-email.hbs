@@ -1,7 +1,17 @@
 <div class="row justify-content-center mt-4">
   <div class="col-sm-4">
     <h1>Registrate con tu email</h1>
+    <br>
     <form method="POST" action="/register" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Nombre completo</label>
+        <input value="{{user.name}}" name="name" type="name" class="form-control {{#if errors.name}}is-invalid{{/if}}"
+          placeholder="ej. Juan García">
+        {{#if errors.name}}
+        <div class="invalid-feedback">{{errors.name}}</div>
+        {{/if}}
+      </div>
+     
       <div class="form-group">
         <label for="formGroupExampleInput2">Email</label>
         <input value="{{user.email}}" name="email" type="email"
@@ -10,6 +20,7 @@
         <div class="invalid-feedback">{{errors.email}}</div>
         {{/if}}
       </div>
+      
       <div class="form-group">
         <label for="formGroupExampleInput2">Contraseña</label>
         <input name="password" type="password" class="form-control {{#if errors.password}}is-invalid{{/if}}"
@@ -17,13 +28,16 @@
         {{#if errors.password}}
         <div class="invalid-feedback">{{errors.password}}</div>
         {{/if}}
-
+       
         <div class="mb-3">
           <label for="image" class="form-label">Imagen de perfil</label>
           <input class="form-control" name="image" type="file" id="image">
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Registrate</button>
+      <br>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary bg-light-green border-0">Registrate</button>
+      </div>
     </form>
   </div>
 </div>

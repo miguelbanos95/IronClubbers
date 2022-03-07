@@ -47,10 +47,15 @@ hbs.registerHelper('eachCarrusell', function (arr, options) {
   }, []).map((el, i) => {
     return options.fn(el)
   })
-
-  // let results = []
-  // for (let i = 0; i < newArr.length; i++){
-  //   results.push(options.fn(newArr[i]));
-  // }
   return newArr.join('')
 })
+
+hbs.registerHelper('userLikedParty', function (options) {
+  const { party, likes } = options.hash;
+  if (party && likes && likes.some(like => like.party == party.id)) {
+    return options.fn(this);
+  } else {
+    return options.inverse(this);
+  }
+})
+

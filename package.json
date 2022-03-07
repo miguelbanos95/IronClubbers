@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "axios": "^0.26.0",
     "bcrypt": "^5.0.1",
     "cloudinary": "^1.28.1",
     "connect": "^3.7.0",
@@ -9,6 +10,7 @@
     "express-session": "^1.17.2",
     "hbs": "^4.2.0",
     "http-errors": "^2.0.0",
+    "mailer": "^0.6.7",
     "mongo": "^0.1.0",
     "mongoose": "^6.2.2",
     "morgan": "^1.10.0",
