@@ -9,6 +9,7 @@ const partySchema = new Schema({
   tags: {
     type: [String],
     minlength: [3, 'Min. 3 caracteres']
+    
   },
   place: {
     type: String,
@@ -16,7 +17,7 @@ const partySchema = new Schema({
   },
   address: {
     type: String,
-    require: [true, "Introduzca la ubicación"]
+    required: [true, "Introduzca la ubicación"]
   },
   start: {
     type: String,
@@ -61,8 +62,7 @@ const partySchema = new Schema({
     required: [true, 'Introduzca el número de asistentes']
   },
   djs: {
-    type: [String],
-    // required: true
+    type: [String]
   }
 }, { 
   timestamps: true,

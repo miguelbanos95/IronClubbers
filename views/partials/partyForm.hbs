@@ -1,7 +1,7 @@
 {{#if edit }}
 <form action="/parties/{{party.id}}/edit" method="POST">
   {{else}}
-  <form action="/parties" method="POST">
+  <form class="mt-4" action="/parties" method="POST">
     {{/if}}
     <div class="form-group mb-1">
       <label for="name">Nombre del Evento</label>
@@ -24,6 +24,7 @@
       </div>
       {{/if}}
     </div>
+
     <div class="form-group mb-1">
       <label for="place">Lugar</label>
       <input name="place" type="text" class="form-control {{#if errors.place}}is-invalid{{/if}}" id="place"
@@ -69,8 +70,9 @@
 
     <div class="form-group mb-1">
       <label for="image">Imagen</label>
-      <input name="image" type="text" class="form-control {{#if errors.image}}is-invalid{{/if}}" id="image"
-        placeholder="URL Imagen" value="{{ party.image }}">
+      <div class="input-group mb-3">
+          <input class="form-control" name="image" type="file" id="image">
+      </div>  
       {{#if errors.image}}
       <div class="invalid-feedback">
         {{errors.image.message}}
@@ -134,9 +136,9 @@
     </div>
 
     <div class="form-group mb-1">
-      <label for="tags" class="col-2 col-form-label">Tags</label>
+      <label for="tags" class="col-2 col-form-label">Etiquetas</label>
       <div class="col-10 form-control">
-        <input type="text" name="tags" class="text-muted border-0" placeholder="Pulsa espacio">
+        <input type="text" name="tags" class="text-muted border-0" placeholder="Pulsa espacio para añadir etiquetas">
       </div>
     </div>
 
@@ -180,7 +182,9 @@
 
       addDjBtn.addEventListener('click', (event) => {
         event.preventDefault();
-
+        if (djsInput.value === '') {
+          return false;
+        } else {
         const newDj = djsInput.value;
         djsInput.value = '';
 
@@ -190,6 +194,7 @@
         djNode.innerHTML = newDj;
 
         djsList.appendChild(djNode);
+        }
       })
     });
   </script>
