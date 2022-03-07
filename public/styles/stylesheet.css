@@ -41,6 +41,7 @@
 
 .bootstrap-tagsinput input {
     border: none;
+    width: 400px;
 }
 
 .bootstrap-tagsinput {
@@ -48,17 +49,16 @@
 	width: 100%;
 	padding: 0.5rem 0.75rem 0;
 	font-size: 1rem;
-  line-height: 1.25;
+    line-height: 1.25;
 	transition: border-color 0.15s ease-in-out;
 }
 	.has-focus {
     background-color: #fff;
-    border-color: #5cb3fd;
 	}
 	
 	.label-info {
 		display: inline-block;
-		background-color: #636c72;
+		background-color: #58a3d4;
 		padding: 0 .4em .15em;
 		border-radius: .25rem;
 		margin-bottom: 0.4em;
@@ -66,11 +66,13 @@
 	
 	input {
 		margin-bottom: 0.5em;
+	    width: 400px;
 	}
 
 
 .bootstrap-tagsinput .tag [data-role="remove"]:after {
 	content: '\00d7';
+    padding-left: 10px;
 }
 
 .no-vissible {
@@ -81,4 +83,7 @@
 }
 #add-dj-btn{
     height: 39px;
+}
+#card-name{
+    height: 50px;
 }
