@@ -6,6 +6,7 @@
         {{#each parties as |party|}}
 
         <div class="col-xl-3 col-sm-6 col-xs-12 gy-4 d-flex align-items-stretch">
+            <a id="link-cards" href="/parties/{{party.id}}" style="text-decoration: none">
             <div id="cards-style" class="card w-100 bg-secondary" style="width: 18rem">
                 <div class="position-relative">
                     <img src="{{party.image}}" class="card-img-top" style="height:220px;" alt="...">
@@ -28,7 +29,7 @@
                         party.date}}{{/dateHelper}}</small>
                     <small class="card-text text-small mb-1">💸 {{party.price}}€</small>
                     <div class="d-flex justify-content-between">
-                        <a href="/parties/{{party.id}}" class="btn btn-primary">Más detalles</a>
+
                         {{#if ../currentUser}}
                         <a href="/parties/{{party.id}}/edit" class="btn btn-success">Editar</a>
                         {{/if}}
@@ -37,7 +38,8 @@
 
             </div>
         </div>
+        </a>
         {{/each}}
-
     </div>
 </div>
+

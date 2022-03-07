@@ -60,9 +60,9 @@ hbs.registerHelper('userLikedParty', function (options) {
   }
 })
 
-
   // let results = []
   // for (let i = 0; i < newArr.length; i++){
   //   results.push(options.fn(newArr[i]));
   // }
+  
 
