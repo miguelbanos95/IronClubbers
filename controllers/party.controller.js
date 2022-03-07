@@ -1,16 +1,83 @@
 const mongoose = require('mongoose');
 const Party = require('../model/party.model');
+const User = require('../model/user.model');
 const musicTypes = Object.keys(require('../data/musicTypes.json'));
+const Like = require('../model/like.model');
+
+
+// module.exports.list = (req, res, next) => {
+//   Like.find()
+//     .then(likes=> {
+//       return Party.find()
+//         .sort({ createdAt: 'desc' })
+//         .then((parties) => res.render('common/home', { parties, likes }))
+//     })
+
+//     .catch((error) => next(error));
+// };
+
 
 module.exports.list = (req, res, next) => {
 
   Party.find()
+    .populate('likes')
     .sort({ createdAt: 'desc' })
     .then((parties) => {
       res.render('common/home', { parties })
     })
     .catch((error) => next(error));
 };
+
+module.exports.results = (req, res, next) => {
+  const { name, musicTypes } = req.query
+  const criteria = {};
+
+  if (name) {
+    criteria.name = new RegExp(name, 'i')
+  }
+
+    if (musicTypes) {
+    criteria.musicTypes = {
+      $all: musicTypes.split(',')
+    }
+  }
+
+  Party.find(criteria)
+    .populate('likes')
+    .then(parties =>
+      res.render('parties/results', {
+        parties,
+        musicTypes,
+        name
+      })
+    ).catch(error => next(error));
+}
+
+// module.exports.results = (req, res, next) => {
+//   const { name, musicType } = req.query
+//   const criteria = {};
+
+//   if (name) {
+//     criteria.name = new RegExp(name, 'i')
+//   }
+//   if (musicType) {
+//     criteria.musicTypes = {
+//       $all: musicTypes.split(',')
+//     }
+//   }
+
+//   Party.find(criteria)
+//     .populate('user')
+//     .then(parties =>
+//       res.render('parties/results', {
+//         parties,
+//         musicType,
+//         name
+//       })
+//     ).catch(error => next(error));
+// }
+
+
 
 module.exports.detail = (req, res, next) => {
   Party.findById(req.params.id)

@@ -1,0 +1,20 @@
+<div>
+
+    {{#if parties}}
+ <br>
+    <div class="container">
+        <h1> La búsqueda de {{ name }} tiene los siguientes resultados: </h1>
+        {{> listedParties}}
+    </div>
+
+    {{else}}
+    <br>
+    <div class="container">
+        <h1> Lo sentimos no tenemos ningún evento {{ name }} disponible </h1>
+        {{/if}}
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/axios.js"></script>

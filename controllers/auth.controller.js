@@ -27,7 +27,7 @@ module.exports.doRegisterLocal = (req, res, next) => {
           // .then((createdUser) => {
           //   mailer.sendActivationEmail(createdUser.email, createdUser.activationToken)
           .then(() => {
-            res.redirect('/profile')
+            res.redirect('/login')
           })
       }
     })
