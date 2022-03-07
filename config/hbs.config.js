@@ -65,6 +65,4 @@ hbs.registerHelper('userLikedParty', function (options) {
   // for (let i = 0; i < newArr.length; i++){
   //   results.push(options.fn(newArr[i]));
   // }
-  return newArr.join('')
-})
 
