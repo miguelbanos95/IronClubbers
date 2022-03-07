@@ -1,0 +1,29 @@
+<div class="row justify-content-center my-5">
+    <div class="col col-sm-8 col-md-6 col-lg-4">
+        <form action="/login" method="post">
+            <h1>Iniciar sesión</h1>
+            <br>
+            <div class="input-group mb-2">
+                <input type="text" name="email" class="form-control py-2 ps-4 {{#if errors.email}}is-invalid{{/if}}"
+                    placeholder="user@example.org" aria-label="User email" value="{{ user.email }}">
+                {{#if errors.email}}<div class="invalid-feedback">{{ errors.email }}</div>{{/if}}
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="password" name="password" class="form-control py-2 ps-4" placeholder="Password"
+                    aria-label="User password">
+                <button class="btn btn-outline-secondary password-toggle c-dark" type="button">
+                    <i class="fa fa-eye-slash fa-fw"></i>
+                </button>
+            </div>
+
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary bg-light-green border-0">Login</button>
+            </div>
+        </form>
+        <hr>
+        <div class="d-grid gap-2">
+                 <a  class="btn btn-primary bg-light-green border-0"href="/register-with-email">Crear cuenta nueva</a>
+            </div>
+    </div>
+</div>

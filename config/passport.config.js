@@ -33,7 +33,7 @@ passport.use('local-auth', new LocalStrategy(
               if (!match) {
                 next(null, false, { error: 'Campo email o contraseña inválidos' })
               } else {
-                if (user.active) {
+                if (user) {
                   next(null, user)
                 } else {
                   next(null, false, { error: "Cuenta ya registrada" })

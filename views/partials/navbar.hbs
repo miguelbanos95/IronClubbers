@@ -16,11 +16,11 @@
             Categorias
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Techno</a></li>
-            <li><a class="dropdown-item" href="#">Tech-house</a></li>
-            <li><a class="dropdown-item" href="#">Hardcore</a></li>
-            <li><a class="dropdown-item" href="#">Melodic-Techno</a></li>
-            <li><a class="dropdown-item" href="#">Reggaeton</a></li>
+            <li><a class="dropdown-item" href="/parties/results/?musicTypes=techno">Techno</a></li>
+            <li><a class="dropdown-item" href="/parties/results/?musicTypes=tech-house">Tech-house</a></li>
+            <li><a class="dropdown-item" href="/parties/results/?musicTypes=hardstyle">Hardstyle</a></li>
+            <li><a class="dropdown-item" href="/parties/results/?musicTypes=melodic-techno">Melodic-Techno</a></li>
+            <li><a class="dropdown-item" href="/parties/results/?musicTypes=reggaeton">Reggaeton</a></li>
           </ul>
         </li>
         <div class="border border-right border-light"></div>
@@ -28,8 +28,8 @@
           <a class="nav-link active" href="/parties/create">Crea tu evento</a>
         </li>
       </ul>
-      <form class="d-flex mx-4">
-        <input class="form-control me-2" type="search" placeholder="Encuentra eventos" aria-label="Search">
+      <form class="d-flex mx-4" method="GET" action="/parties/results">
+        <input class="form-control me-2" name="name" type="search" placeholder="Encuentra eventos" aria-label="Search">
         <button class="btn btn-outline-success fa-solid" type="submit">
           <i class="fa fa-magnifying-glass"></i>
         </button>

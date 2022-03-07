@@ -105,53 +105,20 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+            {{> listedParties }}
         </div>
 
-    </div>
-
-
-
-    <div class="container mt-4 absolute">
-        <h1>Eventos</h1>
-        <div class="row mx-auto">
-
-            {{#each parties as |party|}}
-
-            <div class="col-xl-3 col-sm-6 col-xs-12 gy-4 d-flex align-items">
-            <a id="link-cards" href="/parties/{{party.id}}" style="text-decoration: none">
-                <div id="cards-style" class="card w-100 h-90 bg-secondary" style="width: 18rem">
-                    <div class="position-relative">
-                        <img src="{{party.image}}" class="card-img-top" style="height:220px;" alt="...">
-                        <div class="like-button">
-                            <i class="fa fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="card-body row flex-column mt-2">
-                        <h5 class="card-title">{{party.name}}</h5>
-                        {{!-- <h6><small class="card-text text-small mb-1">📍 {{party.place}}</small></h6>
-                        <h6><small class="card-text text-small mb-1">📅 {{#dateHelper date =
-                            party.date}}{{/dateHelper}}</small></h6> --}}
-                        <small class="card-text text-small mb-1">💸 {{party.price}}€</small>
-                        <div class="d-flex justify-content-between">
-                            <a href="/parties/{{party.id}}/edit" class="btn btn-success">Editar</a>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-            </a>
-            {{/each}}
-        </div>
     </div>
 </div>
 
 
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/axios.js"></script>
 
 
-
-
-<script>
-    window.addEventListener('load', () => {
-        document.querySelector('#carouselExampleControls .carousel-item').classList.add('active')
-    })
-</script>
+    <script>
+        window.addEventListener('load', () => {
+            document.querySelector('#carouselExampleControls .carousel-item').classList.add('active')
+        })
+    </script>

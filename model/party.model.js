@@ -2,7 +2,6 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
 const partySchema = new Schema({
-
   name: {
     type: String,
     required: [true, "Introduzca el nombre"]
@@ -45,7 +44,7 @@ const partySchema = new Schema({
   },
   musicTypes: {
     type: [String],
-    default: ["Techno"]
+    default: ["techno"]
   },
   price:{
     type: Number,
@@ -65,8 +64,27 @@ const partySchema = new Schema({
     type: [String],
     // required: true
   }
-}, { timestamps: true })
+}, { 
+  timestamps: true,
+  toJSON: {
+    virtuals: true,
+    transform: (doc, ret) => {
+      ret.id = doc._id;
+      delete ret._id;
+      delete ret.__v;
+      delete ret.password;
+      delete ret.social;
+      return ret;
+    }
+  } 
+})
 
+partySchema.virtual('likes', {
+  ref: 'Like',
+  localField: '_id',
+  foreignField: 'party',
+  justOne: false,
+})
 
 const Party = mongoose.model('Party', partySchema)
 module.exports = Party
