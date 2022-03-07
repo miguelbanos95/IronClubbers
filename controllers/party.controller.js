@@ -18,6 +18,7 @@ const Like = require('../model/like.model');
 
 
 module.exports.list = (req, res, next) => {
+
   Party.find()
     .populate('likes')
     .sort({ createdAt: 'desc' })
@@ -82,13 +83,14 @@ module.exports.detail = (req, res, next) => {
   Party.findById(req.params.id)
     .then((party) => {
       if (party) {
-        res.render('parties/details', { party });  
+        console.log(party)
+        res.render('parties/details', { party });
       } else {
         res.redirect('/parties');
       }
     })
     .catch(error => next(error));
-};   
+};
 
 module.exports.create = (req, res, next) => {
   res.render('parties/create', {
@@ -114,23 +116,26 @@ module.exports.doCreate = (req, res, next) => {
     image: req.body.image || undefined,
     description: req.body.description,
     musicTypes: partyTypeMusic,
-    type: req.body.type,
+    tags: req.body.tags.split(','),
     capacity: req.body.capacity,
-    price: req.body.price
-    
+    price: req.body.price,
+    djs: req.body.djs?.split(',')
   });
+
 
   party
     .save()
     .then(() => res.redirect('/parties'))
     .catch((error) => {
       if (error instanceof mongoose.Error.ValidationError) {
+        console.error(error.errors)
         res.status(400).render('parties/create', {
           errors: error.errors,
           party,
           musicTypes: musicTypes
         });
       } else {
+        console.error(error)
         next(error);
       }
     });

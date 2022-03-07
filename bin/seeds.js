@@ -16,7 +16,7 @@ mongoose.connection.once('open', () => {
       parties.forEach(party => {
         new Party({
           ...party,
-          price: Math.floor(Math.random() * 100 + 10),
+          price: Math.floor(Math.random() * 20 + 10),
           capacity: Math.floor(Math.random() * 100 + 10),
         }).save()
           .then(rest => console.log(rest))

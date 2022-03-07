@@ -4,35 +4,35 @@ const Schema = mongoose.Schema;
 const partySchema = new Schema({
   name: {
     type: String,
-    required: [true, "Name is required"]
+    required: [true, "Introduzca el nombre"]
   },
-  venueType: {
-    type: String,
-  },
-  eventType:{
+  tags: {
     type: [String],
-    enum: ['music', 'drinks', 'show', 'water', 'dance']
+    minlength: [3, 'Min. 3 caracteres']
   },
   place: {
     type: String,
-    required: [true, "Place is required"]
+    required: [true, "Introduzca el lugar"]
   },
   address: {
     type: String,
-    require: [true, "Address is required"]
+    require: [true, "Introduzca la ubicación"]
   },
   start: {
     type: String,
+    required: [true, "Introduzca la hora de entrada del evento"]
   },
   end: {
     type: String,
+    required: [true, "Introduzca la hora de cierre del evento"]
   },
   ticketTime: {
     type: String,
+   required:[true, "Introduzca la hora de cierre del evento"]
   },
   date: {
     type: Date,
-    required: true
+    required: [true, "Introduzca la fecha del evento"]
   },
   image: {
     type: String,
@@ -40,7 +40,7 @@ const partySchema = new Schema({
   },
   description: {
     type: String,
-    minlength: [10, 'Please enter at least 10 characters ']
+    minlength: [10, 'Introduce min. 10 caracteres']
   },
   musicTypes: {
     type: [String],
@@ -48,15 +48,21 @@ const partySchema = new Schema({
   },
   price:{
     type: Number,
-    required: true
+    required: [true, "Introduzca el precio"],
+    validate: {
+     validator: (value) => {
+       return typeof(value) !== Number
+     },
+     message: "Tiene que ser un número"
+    }
   },
   capacity: {
     type: Number,
-    required: [true, 'What about capaciy, does not mean anuthing for you?']
+    required: [true, 'Introduzca el número de asistentes']
   },
   djs: {
-    type: [mongoose.Schema.Types.ObjectId],
-    ref: "Dj"
+    type: [String],
+    // required: true
   }
 }, { 
   timestamps: true,
