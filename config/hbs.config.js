@@ -59,12 +59,9 @@ hbs.registerHelper('userLikedParty', function (options) {
     return options.inverse(this);
   }
 })
-
-
   // let results = []
   // for (let i = 0; i < newArr.length; i++){
   //   results.push(options.fn(newArr[i]));
   // }
-  return newArr.join('')
-})
+
 
