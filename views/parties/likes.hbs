@@ -1,8 +1,10 @@
 <div class="container mt-4 absolute">
-    <h1>Eventos</h1>
+    {{#if likes}}
+    <h1> Tus Favoritos: </h1>
     <div class="row mx-auto">
+        
 
-        {{#each parties as |party|}}
+         {{#each likes as |like|}}
     
         <div class="col-xl-3 col-sm-6 col-xs-12 gy-4 d-flex align-items-stretch">
             <a id="link-cards" href="/parties/{{party.id}}" style="text-decoration: none">
@@ -14,29 +16,27 @@
                             <button class="like-button border-0 bg-secondary">
                                 <i data-id="{{party.id}}"
                                     class=" like-action fa-solid fa-heart fa-xl
-
                                     {{#userLikedParty likes=party.likes currentUserId=../currentUser.id}} icon-liked {{/userLikedParty}}"></i>
-
-
                             </button>
                             {{/if}}
                         </div>
                     </div>
-
-                    <div class="card-body d-flex flex-column">
-                        <h5 id="card-name" class="card-title">{{party.name}}</h5>
-                        {{!-- <p><small class="card-text text-small">📍 {{party.place}}</small></p> --}}
+                    <div class="card-body d-flex flex-column mt-2">
+                        <h5 class="card-title">{{party.name}}</h5>
+                        <small class="card-text text-small mb-1">📍 {{party.place}}</small>
+                        <br>
                         {{!-- <small class="card-text text-small mb-1">🎵 Tipo de música:
                             {{party.musicTypes}}</small>--}}
-                        {{!-- <p><small class="card-text text-small">📅 {{#dateHelper date =
-                                party.date}}{{/dateHelper}}</small></p> --}}
-                        <div class="d-flex flex-row-reverse bd-highlight justify-content-between">
-                            <h4><big class="card-text text-big mb-1">{{party.price}}€</big></h4>
-                            <div class="d-flex">
-                                {{#if ../currentUser}}
-                                <a href="/parties/{{party.id}}/edit" class="btn btn-success">Editar</a>
-                                {{/if}}
-                            </div>
+                        <small class="card-text text-small mb-1">📅 {{#dateHelper date =
+                            party.date}}{{/dateHelper}}</small>
+                        <br>
+                        <small class="card-text text-small mb-1">💸 {{party.price}}€</small>
+                        <div class="d-flex justify-content-between">
+                            
+                           <a href="/parties/{{party.id}}" class="btn "></a>
+                         
+                            <a href="/parties/{{party.id}}" class="btn "></a>
+                          
                         </div>
                     </div>
 
@@ -44,5 +44,18 @@
         </div>
         </a>
         {{/each}}
+        {{else}}
+
+        <h1>Lo sentimos aún no tiene seleccionado eventos favoritos</h1>
+
+        {{/if}}
+
     </div>
+
+
+
+
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/axios.js"></script>

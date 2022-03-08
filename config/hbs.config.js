@@ -1,4 +1,5 @@
 const hbs = require('hbs');
+require('mongoose');
 
 hbs.registerPartials('./views/partials');
 
@@ -52,17 +53,24 @@ hbs.registerHelper('eachCarrusell', function (arr, options) {
 })
 
 hbs.registerHelper('userLikedParty', function (options) {
-  const { party, likes } = options.hash;
-  if (party && likes && likes.some(like => like.party == party.id)) {
+  const { currentUserId, likes } = options.hash;
+  console.log(currentUserId, likes)
+  if (currentUserId && likes && likes.some(like => like.user.equals(currentUserId))) {
     return options.fn(this);
   } else {
     return options.inverse(this);
   }
 })
 
-  // let results = []
-  // for (let i = 0; i < newArr.length; i++){
-  //   results.push(options.fn(newArr[i]));
-  // }
+hbs.registerHelper('rating', (party, options) => {
+  const rating = party.rating
+  if(!rating){
+    return "El evento no tiene ninguna valoración " 
+  } else { 
+    return `${rating}/5 <i class='fa fa-star fa-fw'></i>`
+  }
+})
+
+
   
 

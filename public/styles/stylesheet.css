@@ -64,6 +64,7 @@
 		margin-bottom: 0.4em;
 	}
 	
+
 	input {
 		margin-bottom: 0.5em;
 	    width: 400px;
@@ -75,6 +76,11 @@
     padding-left: 10px;
 }
 
+
+.fa-heart:before {
+    content: "\f004";
+}
+
 .no-vissible {
     opacity: 0;
     height: 0;
@@ -84,6 +90,7 @@
 #add-dj-btn{
     height: 39px;
 }
+
 #card-name{
     height: 50px;
 }

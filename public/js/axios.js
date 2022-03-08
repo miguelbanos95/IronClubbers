@@ -11,7 +11,9 @@ const likeParty = (id, icon) => httpClient.post(`/like/${id}`)
 
 document.querySelectorAll('.like-action').forEach(btn => {
     btn.onclick = (event) => {
+        event.preventDefault();
         btn.classList.add('icon-events-none')
         likeParty(event.target.dataset.id, event.target)
     }
 })
+
