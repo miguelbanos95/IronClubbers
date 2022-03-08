@@ -39,7 +39,7 @@
     },
     {
         "name": "Circoloco",
-        "tags": [],
+        "tags": ["music", "fiestón", "divertido", "ibiza", "DC10", "techno"],
         "place": "DC10",
         "address": "Cta las salinas, km 1, 07818 Sant Josep de sa Talaia, Illes Balears",
         "start": "20:00",
@@ -227,7 +227,7 @@
         
     },
     {
-        "name": "VG Fuenlabrada presenta I Love Reggaeton ¡con dos copas!",
+        "name": "VG Fuenlabrada presenta: ¡I Love Reggaeton!",
         "tags": [],
         "place": "VG Fuenlabrada",
         "address": "C/ de Móstoles, 4, Fuenlabrada, 28945",

@@ -22,6 +22,7 @@ const GOOGLE_SCOPES = [
 router.get('/', parties.list) 
 router.get('/terms', common.terms)
 router.get('/policy-privacy', common.policyPrivacy)
+router.get('/cookies', common.cookies)
 
 
 /**

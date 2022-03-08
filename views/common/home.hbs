@@ -4,9 +4,9 @@
     </div>
 </div>
 <div class="container">
-
+{{!-- 
     <div class="mt-4">
-        <h1>Top Eventos</h1>
+        <h1>Explora</h1>
     </div>
     <div>
         <div class="container mt-4">
@@ -67,9 +67,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <h1>Explora</h1>
+    <h1 class="mt-4">Top Eventos</h1>
     <div class="mt-2 mb-4">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -79,6 +79,7 @@
                     <div class="row">
                         {{#each this as |party|}}
                         <div class="col-4">
+                            <a id="link-cards" href="/parties/{{party.id}}" style="text-decoration: none">
                             <div class=" w-100" style="width: 18rem">
                                 <div class="position-relative">
                                     <img src="{{party.image}}" class="card-img-top" style="height:220px;" alt="...">
@@ -88,6 +89,7 @@
 
                                 </div>
                             </div>
+                            </a>
                         </div>
                         {{/each}}
                     </div>

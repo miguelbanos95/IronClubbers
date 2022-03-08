@@ -9,37 +9,43 @@
     </div>
 
     <div class="col-md-6 col-sm-12 py-2">
-      <h3 class="font-weight-semi">{{party.name}}</h3>
+      <h2 class="font-weight-semi">{{party.name}}</h2>
       {{!-- <h2>UBICACION</h2> --}}
       <p class="card-address">
-        📍 {{party.address}}
+        📍  &nbsp{{party.address}}
       </p>
+      <br>
+      <div id="events-container">
+        <h3>Etiquetas</h3>
+        <div class="row">
+            <div class="d-flex">
+            {{#each party.tags}}
+            <p class="me-4"> #{{this}}</p>
+            {{/each}}
+            </div>
+        </div>
+
+      </div>
     </div>
 
     <div>
-      <h2>Tickets</h2>
-      <p>💳 Entrada general + 2 consumiciones hasta las {{party.ticketTime}}, luego puedes acceder pero sin
+      <h3>Tickets</h3>
+      <p>💳  &nbspEntrada general + 2 consumiciones hasta las {{party.ticketTime}}, luego puedes acceder pero sin
         consumiciones</p>
     </div>
 
-    <div id="events-container">
-      <h2>Que vas a disfrutar</h2>
-      <p>{{party.tags}}</p>
-
-    </div>
-
     <div>
-      <h2>Información</h2>
-      <p>📅 Fecha: {{#dateHelper date = party.date}}{{/dateHelper}}</p>
-      <p>🕒 Horario: de {{party.start}} a {{party.end}}</p>
-      <p>📍 Lugar: {{party.place}} </p>
-      <p>😷 Es obligatorio el uso de mascarilla en todo momento</p>
+      <h3>Información</h3>
+      <p>📅  &nbsp Fecha: {{#dateHelper date = party.date}}{{/dateHelper}}</p>
+      <p>🕒  &nbsp Horario: de {{party.start}} a {{party.end}}</p>
+      <p>📍  &nbsp Lugar: {{party.place}} </p>
+      <p>😷  &nbsp Es obligatorio el uso de mascarilla en todo momento</p>
       {{!-- <p>🏠 {{}} se reserva el derecho de admisión</p> --}}
-      <p>🔞 Prohibido la venta a menores de 18 años</p>
+      <p>🔞  &nbsp Prohibido la venta a menores de 18 años</p>
     </div>
 
     <div>
-      <h2>Line Up</h2>
+      <h3>Line Up</h3>
       <ul>
         {{#each party.djs}}
         <li>{{this}}</li>
@@ -50,14 +56,14 @@
 
 
     <div>
-      <h2>DESCRIPCIÓN</h2>
+      <h3>DESCRIPCIÓN</h3>
       <p>{{{party.description}}}</p>
     </div>
 
 
-    <h2>ESTILOS</h2>
+    <h3>ESTILOS</h3>
     {{#each party.musicTypes as |musicType|}}
-    <p>{{musicType}}</p>
+    <p>🎵 &nbsp{{musicType}}</p>
     {{/each}}
 
     {{!-- {{#if currentUser}}

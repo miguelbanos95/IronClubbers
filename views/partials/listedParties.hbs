@@ -14,25 +14,29 @@
                             <button class="like-button border-0 bg-secondary">
                                 <i data-id="{{party.id}}"
                                     class=" like-action fa-solid fa-heart fa-xl
+
                                     {{#userLikedParty likes=party.likes currentUserId=../currentUser.id}} icon-liked {{/userLikedParty}}"></i>
+
+
                             </button>
                             {{/if}}
                         </div>
                     </div>
-                    <div class="card-body d-flex flex-column mt-2">
-                        <h5 class="card-title">{{party.name}}</h5>
-                        <small class="card-text text-small mb-1">📍 {{party.place}}</small>
+
+                    <div class="card-body d-flex flex-column">
+                        <h5 id="card-name" class="card-title">{{party.name}}</h5>
+                        {{!-- <p><small class="card-text text-small">📍 {{party.place}}</small></p> --}}
                         {{!-- <small class="card-text text-small mb-1">🎵 Tipo de música:
                             {{party.musicTypes}}</small>--}}
-                        <small class="card-text text-small mb-1">📅 {{#dateHelper date =
-                            party.date}}{{/dateHelper}}</small>
-                        <small class="card-text text-small mb-1">💸 {{party.price}}€</small>
-                        <div class="d-flex justify-content-between">
-                            {{#if ../currentUser}}
-                            <a href="/parties/{{party.id}}/edit" class="btn btn-success">Editar</a>
-                            {{else}}
-                            <a href="/parties/{{party.id}}" class="btn "></a>
-                            {{/if}}
+                        {{!-- <p><small class="card-text text-small">📅 {{#dateHelper date =
+                                party.date}}{{/dateHelper}}</small></p> --}}
+                        <div class="d-flex flex-row-reverse bd-highlight justify-content-between">
+                            <h4><big class="card-text text-big mb-1">{{party.price}}€</big></h4>
+                            <div class="d-flex">
+                                {{#if ../currentUser}}
+                                <a href="/parties/{{party.id}}/edit" class="btn btn-success">Editar</a>
+                                {{/if}}
+                            </div>
                         </div>
                     </div>
 
