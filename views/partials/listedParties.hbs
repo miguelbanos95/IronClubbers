@@ -20,19 +20,25 @@
             <div class="card-body d-flex flex-column">
                 <h5 id="card-name" class="card-title"><small> {{party.name}}</small></h5>
                 <div class="d-flex flex-row-reverse bd-highlight justify-content-between">
-                    <h4><big class="card-text text-big mb-1">{{party.price}}€</big></h4>
-                    <div class="d-flex">
-                        {{#if ../currentUser}}
-                        <small>
 
-                            <a href="/parties/{{party.id}}/edit" class="btn btn-success rounded-pill">Editar</a>
-                        </small>
-                        {{/if}}
+                    <h4><big class="card-text text-big mb-1">{{party.price}}€</big></h4>
+
+                    <div class="mt-2">
+                        <i class="fa-solid fa-star fa-xl" style="color: yellow;"></i>
+                        {{!-- <small></small> --}}
                     </div>
+
+                </div>
+                <div class="button-edit">
+                    {{#if ../currentUser}}
+                    <small>
+                        <a href="/parties/{{party.id}}/edit" class="btn btn-success rounded-pill">Editar</a>
+                    </small>
+                    {{/if}}
                 </div>
             </div>
-
         </div>
+
     </a>
 </div>
 
