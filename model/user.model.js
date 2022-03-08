@@ -12,7 +12,6 @@ const userSchema = new mongoose.Schema({
     required: 'este campo es obligatorio',
     minLength: [3, 'este campo necesita al menos 3 caracteres']
   },
-
   email: {
     type: String,
     required: 'este campo es obligatorio',
