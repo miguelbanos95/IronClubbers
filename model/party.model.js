@@ -76,7 +76,10 @@ const partySchema = new Schema({
       delete ret.social;
       return ret;
     }
-  } 
+  } ,
+  toObject: {
+    virtuals: true
+  }
 })
 
 partySchema.virtual('likes', {
@@ -85,6 +88,13 @@ partySchema.virtual('likes', {
   foreignField: 'party',
   justOne: false,
 })
+
+// partySchema.virtual('comments', {
+//   ref: 'Comment', 
+//   localField: '_id', 
+//   foreignField: 'party', 
+//   justOne: false,
+//  });
 
 const Party = mongoose.model('Party', partySchema)
 module.exports = Party

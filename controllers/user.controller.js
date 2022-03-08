@@ -1,13 +1,12 @@
 const Like = require('../model/like.model')
 
-module.exports.profile = (req, res, next) => {
-  
-    Like.find({ user: req.user.id})
-    .populate('party')
-    .then((likes) =>{
-        res.render("auth/profile", { likes })
-    })
-    .catch(next) 
+module.exports.favList = (req, res, next) => {
+    Like.find({ user: req.user.id })
+        .populate('party')
+        .then((likes) =>{
+            res.render("parties/likes", { likes })
+        })
+        .catch(next) 
 }
 
 module.exports.doLike = (req, res, next) => {
@@ -27,3 +26,4 @@ module.exports.doLike = (req, res, next) => {
     })
     .catch(next)
 }
+

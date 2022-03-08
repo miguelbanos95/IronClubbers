@@ -64,13 +64,16 @@
 		margin-bottom: 0.4em;
 	}
 	
-	input {
-		margin-bottom: 0.5em;
-	}
+
 
 
 .bootstrap-tagsinput .tag [data-role="remove"]:after {
 	content: '\00d7';
+}
+
+
+.fa-heart:before {
+    content: "\f004";
 }
 
 .no-vissible {
@@ -82,3 +85,4 @@
 #add-dj-btn{
     height: 39px;
 }
+
