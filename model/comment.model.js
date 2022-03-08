@@ -9,17 +9,10 @@ const commentSchema = new mongoose.Schema({
    type: mongoose.Schema.Types.ObjectId,
    ref: 'Party'
  },
- message: {
+ comment: {
    type: String,
    required: true,
    required: 'Comment is required'
- },
- date : {
-   type:Date, 
-   default: Date.now
- },
- owner: {
-   type: Object,
  },
  rate: {
    type: Number,

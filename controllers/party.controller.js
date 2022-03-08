@@ -3,6 +3,7 @@ const Party = require('../model/party.model');
 const User = require('../model/user.model');
 const musicTypes = Object.keys(require('../data/musicTypes.json'));
 const Like = require('../model/like.model');
+const Comment = require('../model/comment.model')
 
 
 // module.exports.list = (req, res, next) => {
@@ -36,7 +37,7 @@ module.exports.results = (req, res, next) => {
     criteria.name = new RegExp(name, 'i')
   }
 
-    if (musicTypes) {
+  if (musicTypes) {
     criteria.musicTypes = {
       $all: musicTypes.split(',')
     }
@@ -52,30 +53,6 @@ module.exports.results = (req, res, next) => {
       })
     ).catch(error => next(error));
 }
-
-// module.exports.results = (req, res, next) => {
-//   const { name, musicType } = req.query
-//   const criteria = {};
-
-//   if (name) {
-//     criteria.name = new RegExp(name, 'i')
-//   }
-//   if (musicType) {
-//     criteria.musicTypes = {
-//       $all: musicTypes.split(',')
-//     }
-//   }
-
-//   Party.find(criteria)
-//     .populate('user')
-//     .then(parties =>
-//       res.render('parties/results', {
-//         parties,
-//         musicType,
-//         name
-//       })
-//     ).catch(error => next(error));
-// }
 
 
 
@@ -100,7 +77,6 @@ module.exports.create = (req, res, next) => {
 
 module.exports.doCreate = (req, res, next) => {
   let partyTypeMusic = req.body.musicTypes;
-
   if (partyTypeMusic && !Array.isArray(partyTypeMusic)) {
     partyTypeMusic = [partyTypeMusic]
   }
@@ -176,4 +152,5 @@ module.exports.delete = (req, res, next) => {
     .then(() => res.redirect('/parties'))
     .catch(error => next(error));
 };
+
 

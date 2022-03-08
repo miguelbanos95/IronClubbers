@@ -36,6 +36,9 @@ router.post('/parties', authMiddleware.isAuthenticated, parties.doCreate);
 router.get('/parties/:id/edit', authMiddleware.isAuthenticated, parties.edit);
 router.post('/parties/:id/edit', authMiddleware.isAuthenticated, parties.doEdit);
 router.post('/parties/:id/delete', authMiddleware.isAuthenticated, parties.delete);
+
+// router.get('/parties/:id/comment', authMiddleware.isAuthenticated, parties.comment);
+// router.post('/parties/:id/docomment', authMiddleware.isAuthenticated, parties.doComment);
 /**
  * AUTH ROUTES 
  */
@@ -68,8 +71,10 @@ router.get('/auth/google/callback', auth.doLoginGoogle)
 //  });
 
 /* User routes*/
-router.get('/profile', authMiddleware.isAuthenticated, user.profile)
+router.get('/favs', authMiddleware.isAuthenticated, user.favList)
 router.post('/like/:id', authMiddleware.isAuthenticated, user.doLike)
+
+
 
 
 module.exports = router
