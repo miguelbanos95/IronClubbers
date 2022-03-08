@@ -116,7 +116,7 @@ module.exports.doCreate = (req, res, next) => {
     image: req.body.image || undefined,
     description: req.body.description,
     musicTypes: partyTypeMusic,
-    tags: req.body.tags.split(','),
+    tags: req.body.tags.split(',').slice(0, 4),
     capacity: req.body.capacity,
     price: req.body.price,
     djs: req.body.djs?.split(',')
