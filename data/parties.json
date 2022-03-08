@@ -1,7 +1,11 @@
 [
     {
         "name": "Altr-Ego",
-        "tags": ["musica", "techno", "mágico"],
+        "tags": [
+            "musica",
+            "techno",
+            "mágico"
+        ],
         "place": "La Riviera",
         "address": "P.º Bajo de la Virgen del Puerto, S/N, 28005 Madrid",
         "start": "00:00",
@@ -10,7 +14,9 @@
         "ticketTime": "01:30",
         "image": "https://images.xceed.me/events/banners/alter-ego-carnaval-madrid-xceed-33ac.jpg?w=920&ar=16:9&fm=auto",
         "description": "Esta gran sala emplazada en la ribera del Manzanares, que ha visto pasar cinco décadas de mágia nocturna, es hoy la sala donde más importantes y variados eventos se celebran en Madrid.",
-        "musicTypes": ["melodic-techno"],
+        "musicTypes": [
+            "melodic-techno"
+        ],
         "venueType": "Una fiesta de culto para los amantes de la música techno",
         "capacity": 500,
         "djs": [
@@ -20,7 +26,13 @@
     },
     {
         "name": "Innellea in Mondo",
-        "tags": [],
+        "tags": [
+            "Techno",
+            "Mágico",
+            "Good-music",
+            "Mondo",
+            "Innellea"
+        ],
         "place": "Mondo",
         "address": "c/ de Alcalá, 20, 28014 Madrid",
         "start": "00:00",
@@ -29,7 +41,10 @@
         "ticketTime": "01:00",
         "image": "https://api.djmagla.com/wp-content/uploads/2019/07/Innellea.jpg",
         "description": "Esta gran sala emplazada en la ribera del Manzanares, que ha visto pasar cinco décadas de mágia nocturna, es hoy la sala donde más importantes y variados eventos se celebran en Madrid.",
-        "musicTypes": ["melodic-techno", "techno"],
+        "musicTypes": [
+            "melodic-techno",
+            "techno"
+        ],
         "venueType": "Una fiesta de culto para los amantes de la música melodic techno",
         "capacity": 150,
         "djs": [
@@ -39,7 +54,14 @@
     },
     {
         "name": "Circoloco",
-        "tags": ["music", "fiestón", "divertido", "ibiza", "DC10", "techno"],
+        "tags": [
+            "music",
+            "fiestón",
+            "divertido",
+            "ibiza",
+            "DC10",
+            "techno"
+        ],
         "place": "DC10",
         "address": "Cta las salinas, km 1, 07818 Sant Josep de sa Talaia, Illes Balears",
         "start": "20:00",
@@ -48,7 +70,11 @@
         "ticketTime": "21:00",
         "image": "https://www.ibizarocks.com/wp-content/uploads/2019/04/slideshow-1553693080.jpg",
         "description": "DC10 apuesta por una música electrónica underground y de calidad. Circoloco es una de sus fiestas más conocidas donde podrás disfrutar de la mejor música techno, famosa por celebrarse todos los lunes del verano y por contar con Dj´s de primer nivel.",
-        "musicTypes": ["melodic-techno", "techno" , "tech-house"],
+        "musicTypes": [
+            "melodic-techno",
+            "techno",
+            "tech-house"
+        ],
         "venueType": "Una fiesta de culto para los amantes de la música tech-house más reciente",
         "capacity": 1000,
         "djs": [
@@ -63,7 +89,12 @@
     },
     {
         "name": "UniversiParty American Spring Break",
-        "tags": [],
+        "tags": [
+            "UniversiParty",
+            "Spring",
+            "Break",
+            "Fabrik"
+        ],
         "place": "Fabrik",
         "address": "Av de la Industria, 82 (Humanes de Madrid), 28970",
         "start": "20:00",
@@ -72,7 +103,9 @@
         "ticketTime": "21:00",
         "image": "https://fever.imgix.net/plan/photo/f504215a-8346-11ec-b738-e6ee82312223.jpg?w=550&h=550&auto=format&fm=jpg",
         "description": "¡Que comience uno de los fiestones de la temporada! Universiparty vuelve a Fabrik con American Spring Break y nuevas risas y bailes hasta el amanecer. Forma parte de esta fiesta legendaria, llama a tus amigos y disfruta de un line up de lujo, bailarines, espectáculos, rondas de chupitos y muchas sorpresas... ¡para que esta noche sea inolvidable!",
-        "musicTypes": ["reggaeton"],
+        "musicTypes": [
+            "reggaeton"
+        ],
         "venueType": "Un line up muy top con 7 DJs + 1 speaker/presentador",
         "capacity": 940,
         "djs": [
@@ -88,7 +121,12 @@
     },
     {
         "name": "dj KAGYU",
-        "tags": [],
+        "tags": [
+            "Melodic",
+            "Music",
+            "fiestón",
+            "Madrid"
+        ],
         "place": "Nômadâ",
         "address": "c/ Serrano 41 (Madrid - Madrid, , España)",
         "start": "20:00",
@@ -97,7 +135,9 @@
         "ticketTime": "21:00",
         "image": "http://www.clubbingspain.com/imagenes/flyer-260324506-1106993180062779-1023227542112953342-n-webp-4fnmjf4ffvuldn6.jpg",
         "description": "En una Jaima de lujo en el corazón del centro de Madrid, podrás escuchar a DJ Kagyu que nos estará deleitando con los místicos sonidos que se escuchan en Ibiza, Tulum y Mykonos.",
-        "musicTypes": ["melodic-techno"],
+        "musicTypes": [
+            "melodic-techno"
+        ],
         "venueType": "",
         "capacity": 150,
         "djs": [
@@ -109,7 +149,9 @@
         "name": "El club clandestino más mítico de Madrid",
         "tags": [
             "Bizarro",
-            "divertido"
+            "Divertido",
+            "Vicio",
+            "Music"
         ],
         "place": "Medias Puri",
         "address": "Plaza de Tirsode Molina, 1, 28012",
@@ -119,7 +161,9 @@
         "ticketTime": "00:00",
         "image": "https://fever.imgix.net/plan/photo/7e631272-e3eb-11eb-807f-3e037c7ac9b8.jpg?w=550&h=550&auto=format&fm=jpg",
         "description": "¡El exitoso speakeasy Medias Puri reabre al público! El club clandestino ubicado en la trastienda de la mercería de la Plaza de Tirso de Molina abrirá viernes y sábados y contará con una selección de sus números más emblemáticos dirigidos por Felype de Lima y con la presencia de la carismática dueña y regente de la mercería: Puri. El proyecto cuenta además con un consolidado equipo creativo compuesto por Felype de Lima, responsable de la dirección artística (Premio Max 2015 al Mejor Diseño de Vestuario). La propuesta musical corre a cargo del artista David Bastidas y cinco bailarines componen el cuerpo de baile. ¿Preparado para volver a darlo todo?",
-        "musicTypes": ["reggaeton"],
+        "musicTypes": [
+            "reggaeton"
+        ],
         "capacity": 500,
         "djs": [
             "David Bastidas",
@@ -129,7 +173,12 @@
     },
     {
         "name": "La Resistencia",
-        "tags": [],
+        "tags": [
+            "Fabrik",
+            "Remember",
+            "RaulOrtiz",
+            "Resistencia"
+        ],
         "place": "Fabrik",
         "address": "Avenida de la Industria, 82 (Humanes de Madrid), 28970",
         "start": "18:00",
@@ -138,7 +187,9 @@
         "ticketTime": "20:00",
         "image": "https://fever.imgix.net/plan/photo/8654010c-8991-11ec-a7b0-520019456d2f?w=550&h=550&auto=format&fm=jpg",
         "description": "El sábado 5 de marzo vuelve una de las fiestas más espectaculares de Fabrik... ¡La Resistencia! Un evento de culto para los amantes del sonido Remember, que con sólo 2 ediciones al año, vuelve al templo en su edición de Marzo. Capitaneada por Raúl Ortiz y rodeado de los mejores DJs, te transportarán a la época dorada de la música electrónica. Con tres salas para tu disfrute y el mejor ambiente... ¿Quieres formar parte de La Resistencia?",
-        "musicTypes":[ "remember"],
+        "musicTypes": [
+            "remember"
+        ],
         "capacity": 1100,
         "djs": [
             "Raúl Ortiz"
@@ -147,7 +198,12 @@
     },
     {
         "name": "Code 146",
-        "tags": [],
+        "tags": [
+            "Code",
+            "fiestón",
+            "146",
+            "Fabrik"
+        ],
         "place": "Fabrik",
         "address": "Avenida de la Industria, 82 (Humanes de Madrid), 28970",
         "start": "18:00",
@@ -156,7 +212,9 @@
         "ticketTime": "20:00",
         "image": "https://fever.imgix.net/plan/photo/d0fc71ae-8990-11ec-b294-e265ca2a7715?w=550&h=550&auto=format&fm=jpg",
         "description": "¡CODE está de vuelta! Save the date porque el 19 de marzo te esperan nada menos que 12 de horas de fiesta ¡sin parar! La sesión techno más potente de la capital vuelve a poner el techno en el lugar que se merece. Artistas punteros del underground mundial como Oscar Mulero, Fatima Hajji, Jeff Mills o Dax J, se darán cita en un evento que volverá a contar con las cinco áreas de Fabrik abiertas para que lo des todo sin descanso.",
-        "musicTypes": ["techno"],
+        "musicTypes": [
+            "techno"
+        ],
         "djs": [
             "Oscar Mulero",
             "Fatima Hajji",
@@ -167,7 +225,13 @@
     },
     {
         "name": "150: En Fabrik",
-        "tags": [],
+        "tags": [
+            "Hard",
+            "HardStyle",
+            "150",
+            "Fabrik",
+            "fiestón"
+        ],
         "place": "Fabrik",
         "address": "Avenida de la Industria, 82 (Humanes de Madrid), 28970",
         "start": "22:00",
@@ -176,15 +240,19 @@
         "ticketTime": "00:00",
         "image": "https://fever.imgix.net/plan/photo/eab6e382-8b47-11ec-9017-760afc7b5e3c.png?w=550&h=550&auto=format&fm=jpg",
         "description": "¡Nuevo evento HARDSTYLE en Fabrik! 150 regresa en marzo, un mes más, con un cartel que vuelve a traer a Madrid a los artistas más contundentes de la música hardstyle, hardcore y todas sus variantes. El día 12 de marzo tendremos una cita de las importantes para los amantes de los BPMs altos, con un elenco que se dividirá de nuevo en tres áreas con más de ocho horas de música y diversión.",
-        "musicTypes": ["hardstyle"],
-        "djs": ["Bass Modulators",
+        "musicTypes": [
+            "hardstyle"
+        ],
+        "djs": [
+            "Bass Modulators",
             "Frequencerz",
             "D-sturb",
             "Zany",
             "Rejecta",
             "Ncrypta",
             "Re-Style",
-            "Tha Playah"]
+            "Tha Playah"
+        ]
     },
     {
         "name": "Andrés Campo en Ekho Club en La Riviera + copa",
@@ -197,14 +265,21 @@
         "ticketTime": "01:30",
         "image": "https://fever.imgix.net/plan/photo/204f823e-834a-11ec-9970-ee9252b80abe.jpg?w=550&h=550&auto=format&fm=jpg",
         "description": "¡Vuelve Ekho Electronic Club a La Riviera! Disfruta de tu sesión de electrónica de referencia! Un fiestón con los mejores artistas de laelectrónica mundial, que irán pasando uno tras otro por la cabina para ofrecerte una noche de la mejor música y un ambiente top. ¡A darlo todo!",
-        "musicTypes": ["tech-house"],
+        "musicTypes": [
+            "tech-house"
+        ],
         "capacity": 1,
-        "djs": ["Andrés Campos"]
-        
+        "djs": [
+            "Andrés Campos"
+        ]
     },
     {
         "name": "Makineros 90’s llega a Fabrik",
-        "tags": [],
+        "tags": [
+            "Remember90",
+            "OldSchool",
+            "fiestón"
+        ],
         "place": "Fabrik",
         "address": "Avenida de la Industria, 82 (Humanes de Madrid), 28970",
         "start": "18:00",
@@ -213,22 +288,29 @@
         "ticketTime": "20:00",
         "image": "https://fever.imgix.net/plan/photo/ac45353e-61aa-11ec-9903-7e8eb68a0526.jpg?w=550&h=550&auto=format&fm=jpg",
         "description": "¡Makineros 90’s aterriza directo en Fabrik, después de agotar todas las entradas de su 8º Aniversario en Girona! En esta ocasión, ofreciendo un formato XXL que convoca a todos sus fieles extendidos por toda la geografía española...¡Y en el mejor club con 3 zonas de baile, actuaciones en directo y artistas internacionales! Todo ello formará parte de esta edición maximizada en aforo e infraestructuras para que todos los seguidores de Makineros 90’ puedan acudir al que será un fiestón inolvidable.",
-        "musicTypes": ["remember"],
+        "musicTypes": [
+            "remember"
+        ],
         "capacity": 1,
-        "djs":
-            ["Jumper Brothers",
+        "djs": [
+            "Jumper Brothers",
             "Pastis & Buenri",
             "Javi Boss",
             "Sensity World",
             "The Kid Ft Noemi",
             "Paul Elstak",
             "Neophyte",
-            "Miguel Serna"]
-        
+            "Miguel Serna"
+        ]
     },
     {
         "name": "VG Fuenlabrada presenta: ¡I Love Reggaeton!",
-        "tags": [],
+        "tags": [
+            "Latino",
+            "Bachata",
+            "Reggaeton",
+            "fiestón"
+        ],
         "place": "VG Fuenlabrada",
         "address": "C/ de Móstoles, 4, Fuenlabrada, 28945",
         "start": "00:00",
@@ -237,9 +319,107 @@
         "ticketTime": "03:00",
         "image": "https://fever.imgix.net/plan/photo/5f9bf85e-98a9-11ec-8743-c2537cfee693.jpg?w=550&h=550&auto=format&fm=jpg",
         "description": "Llega a VG Fuenlabrada 'I love Reggaeton!' Un fiestón de esos que se te quedan guardados en la memoria para siempre... ¡Prepárate para vivir una de las mejores noches de tu vida! Dos zonas con todos los clásicos del reggaeton, copazos, el mejor ambiente y seis horas por delante para darlo todo en una de tus salas de referencia. ¿Todo listo? ¡Que comience uno de los mejores fiestones del año!",
-        "musicTypes": ["reggaeton"],
+        "musicTypes": [
+            "reggaeton"
+        ],
         "capacity": 150,
-        "djs": ["DJ Cali"]
-        
+        "djs": [
+            "DJ Cali"
+        ]
+    },
+    {
+        "name": "Uñas Chung Lee: fiesta en el lejano oriente",
+        "tags": [
+            "80's", "90`s", "Peculiar", "Oriente"
+        ],
+        "place": "Uñas Chung Lee",
+        "address": "38, Calle Hilarión Eslava, Madrid, 28015",
+        "start": "23:00",
+        "end": "05:30",
+        "date": "2022-03-11",
+        "ticketTime": "00:00",
+        "image": "https://fever.imgix.net/plan/photo/bda83bb8-dfd8-11eb-9609-a2dcff75d2dd.jpg?w=550&h=550&auto=format&fm=jpg",
+        "description": "Uñas Chung Lee te ofrece una peculiar oportunidad de acercarte al lejano oriente mientras tomas algo en buena compañía y disfrutas de la buena música de los 80 y 90 de la mano de DJ Orion Bow. Se trata de un concepto creado por la productora de espectáculos LETSGO, responsable del también célebre club Medias Puri y que recibió el pasado mes de septiembre el galardón ‘Innovación y sostenibilidad’ que otorga el Ayuntamiento de Madrid con motivo del Día Mundial del Turismo. Elige tu mascarilla más molona, pásate por allí y... ¡descubre un local fascinante mientras disfrutas de una buena bebida y musicón!",
+        "musicTypes":["reggaeton"],
+        "djs": [
+            "DJ Orion Bow"
+        ],
+        "price": 20
+    },
+    {
+        "name": "Megapanic! Water Party en Fabrik",
+        "tags": [
+            "WaterParty", "Terraza", "Atracciones", "Agua", "fiestón", "top"
+        ],
+        "place": "Fabrik",
+        "address": "Avenida de la Industria, 82 (Humanes de Madrid), 28970",
+        "start": "18:00",
+        "end": "06:00",
+        "date": "2022-07-23",
+        "ticketTime": "20:00",
+        "image": "https://fever.imgix.net/plan/photo/6e048b4c-8f3d-11ec-8f38-4aea7cb7d571?w=550&h=550&auto=format&fm=jpg",
+        "description": "Vuelve la fiesta más refrescante y divertida de Fabrik: Megapanic! Water Party. Vive el atardecer al aire libre en la terraza llena de atracciones, hinchables, ¡y mucha, mucha agua! Déjate llevar en un fiestón durante más de 12 horas de. Disfruta de los mejores DJs en directo y la música que más te gusta: Remember, Hardcore y Hardstyle. ¡No te lo pierdas!",
+        "musicTypes": ["hardstyle", "remember"],
+        "djs": [
+            "Próximamente..."
+        ],
+        "price": 25
+    },
+    {
+        "name": "",
+        "tags": [
+            "WaterParty", "Terraza", "Atracciones", "Agua", "fiestón", "top"
+        ],
+        "place": "",
+        "address": "",
+        "start": "18:00",
+        "end": "06:00",
+        "date": "2022-07-23",
+        "ticketTime": "20:00",
+        "image": "",
+        "description": "",
+        "musicTypes": ["hardstyle", "remember"],
+        "djs": [
+            ""
+        ],
+        "price": 25
+    },
+    {
+        "name": "Sam Paganini en Ekho Club",
+        "tags": [
+            "Technazo", "electronica", "TitoSam", "Ekho", "fiestón", "top"
+        ],
+        "place": "La Riviera",
+        "address": "Paseo Bajo Virgen del Puerto, s/n, 28005",
+        "start": "00:00",
+        "end": "06:00",
+        "date": "2022-04-13",
+        "ticketTime": "1:30",
+        "image": "https://fever.imgix.net/plan/photo/bbf4afda-8998-11ec-8181-8acc55b319b0.jpg?w=550&h=550&auto=format&fm=jpg",
+        "description": "¡Vuelve Ekho Electronic Club a La Riviera! Disfruta de tu sesión de electrónica de referencia! Un fiestón con los mejores artistas de la electrónica mundial, que irán pasando uno tras otro por la cabina para ofrecerte una noche de la mejor música y un ambiente top. ¡A darlo todo!",
+        "musicTypes": ["techno"],
+        "djs": [
+            "Sam Paganini"
+        ],
+        "price": 18
+    },
+    {
+        "name": "¡Entradas para el Latin Fest 2022!",
+        "tags": [
+            "Latino", "Festival", "FoodTrucks", "Concierto", "Valencia", "Playa"
+        ],
+        "place": "Marina Sur Puerto Valencia",
+        "address": "Poblats Marítims, Valencia, 46011",
+        "start": "18:00",
+        "end": "02:30",
+        "date": "2022-07-02",
+        "ticketTime": "19:30",
+        "image": "https://fever.imgix.net/plan/photo/0108768c-8517-11ec-944b-ae51e7f960d6.jpg?w=550&h=550&auto=format&fm=jpg",
+        "description": "¡Más de 8 horas de pura fiesta! Vuelve el mejor festival de música urbana del momento, ¡vuelve al Latin Fest! La edición pasada fue alucinante, y esta edición de 2022 amenaza con ser aun mejor que su gran predecesora. Ve calentando motores, ¡la fiesta urbana del año te espera!",
+        "musicTypes": ["reggaeton"],
+        "djs": [
+            "Daddy Yankee", "Justin Quiles", "Juan Magan", "Eladio Carrión", "Lerica", "Farruko", "Ñengo Flow"
+        ],
+        "price": 25
     }
 ]

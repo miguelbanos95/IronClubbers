@@ -20,6 +20,9 @@
     background-size: cover;
     background-position: center;
 }
+.main-tittle{
+    font-size: 80px;
+}
 .carousel-text{
     height: 50px;
     overflow: hidden;
@@ -30,6 +33,9 @@
 }
 .text-modal{
     color: black;
+}
+.icon{
+    color:#fff
 }
 
 .icon-liked {
