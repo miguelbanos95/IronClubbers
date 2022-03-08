@@ -41,6 +41,22 @@
 .icon-liked {
     color: red;
 }
+.card-img-top {
+    box-shadow: 0px 0px 19px -4px rgb(0 0 0 / 12%);
+    border: 1px solid rgb(0 0 0 / 5%) !important;
+    border-radius: 0.45rem !important;
+    width: 292px !important;
+  
+}
+
+.card-img-carousel{
+    width: 350px;
+    border-radius: 0.45rem;
+    border: 1px solid rgba(211, 211, 211, 0.05)
+}
+#carousel-position{
+    margin-left: 40px;
+}
 #link-cards{
     color: white;
 }

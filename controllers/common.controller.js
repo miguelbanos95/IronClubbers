@@ -12,3 +12,4 @@ module.exports.policyPrivacy = (req, res, next) => {
 module.exports.cookies = (req, res, next) => {
     res.render('common/cookies')
 }
+module
