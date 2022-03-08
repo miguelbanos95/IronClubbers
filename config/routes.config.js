@@ -36,6 +36,8 @@ router.post('/parties', authMiddleware.isAuthenticated, parties.doCreate);
 router.get('/parties/:id/edit', authMiddleware.isAuthenticated, parties.edit);
 router.post('/parties/:id/edit', authMiddleware.isAuthenticated, parties.doEdit);
 router.post('/parties/:id/delete', authMiddleware.isAuthenticated, parties.delete);
+//Payment 
+router.get('/parties/:id/payment');
 
 // router.get('/parties/:id/comment', authMiddleware.isAuthenticated, parties.comment);
 // router.post('/parties/:id/docomment', authMiddleware.isAuthenticated, parties.doComment);

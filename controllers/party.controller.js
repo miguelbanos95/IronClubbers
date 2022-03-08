@@ -4,6 +4,7 @@ const User = require('../model/user.model');
 const musicTypes = Object.keys(require('../data/musicTypes.json'));
 const Like = require('../model/like.model');
 const Comment = require('../model/comment.model')
+const Payment = require("../model/payment.model");
 
 
 // module.exports.list = (req, res, next) => {
@@ -153,4 +154,15 @@ module.exports.delete = (req, res, next) => {
     .catch(error => next(error));
 };
 
-
+module.exports.payment = (req, res, next) => {
+  Party.findById(req.params.id)
+    // .populate('user')
+    .then(parties => {
+      if (parties) {
+        res.render('parties/payment', {
+          parties
+        })
+      }
+    })
+    .catch(error => next(error));
+}
