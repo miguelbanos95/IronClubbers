@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const User = require('../model/user.model')
 const passport = require('passport')
+const mailer = require('../config/mailer.config')
 
 module.exports.register = (req, res, next) => {
   res.render('auth/register')
@@ -24,9 +25,8 @@ module.exports.doRegisterLocal = (req, res, next) => {
           user.image = req.file.path
         }
         return User.create(user)
-          // .then((createdUser) => {
-          //   mailer.sendActivationEmail(createdUser.email, createdUser.activationToken)
-          .then(() => {
+           .then((createdUser) => {
+           mailer.sendActivationEmail(createdUser.email, createdUser.activationToken)
             res.redirect('/login')
           })
       }
@@ -40,18 +40,18 @@ module.exports.doRegisterLocal = (req, res, next) => {
     })
 }
 
-// module.exports.activate = (req, res, next) => {
-//   const activationToken = req.params.token;
+module.exports.activate = (req, res, next) => {
+  const activationToken = req.params.token;
 
-//   User.findOneAndUpdate(
-//     { activationToken, active: false },
-//     { active: true }
-//   )
-//     .then(() => {
-//       res.redirect('/login')
-//     })
-//     .catch(err => next(err))
-// }
+  User.findOneAndUpdate(
+    { activationToken, active: false },
+    { active: true }
+  )
+    .then(() => {
+      res.redirect('/login')
+    })
+    .catch(err => next(err))
+}
 
 const login = (req, res, next, provider) => {
   passport.authenticate(provider || 'local-auth', (err, user, validations) => {

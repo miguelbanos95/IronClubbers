@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+
 #title-size{
     font-size: 25px;
 }
@@ -86,9 +90,7 @@
 		margin-bottom: 0.4em;
 	}
 	
-
 	input {
-		margin-bottom: 0.5em;
 	    width: 400px;
 	}
 
@@ -112,10 +114,15 @@
 #add-dj-btn{
     height: 39px;
 }
-
 #card-name{
     height: 50px;
 }
+#googleMap {
+    width: 50vw;
+    height: 300px;
+}
+
 #card-place{
     margin-top: 5px;
 }
+
