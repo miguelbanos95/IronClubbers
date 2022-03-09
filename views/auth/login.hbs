@@ -11,8 +11,9 @@
             <br>
 
             <div class="input-group mb-3">
-                <input type="password" name="password" class="form-control py-2 ps-4" placeholder="Password"
-                    aria-label="User password">
+                <input type="password" name="password" class="form-control py-2 ps-4{{#if errors.password}}is-invalid{{/if}}" placeholder="Password"
+                    aria-label="User password" value="{{ user.password }}">
+                      {{#if errors.email}}<div class="invalid-feedback">{{ errors.email }}</div>{{/if}}
                 <button class="btn btn-outline-secondary password-toggle c-dark" type="button">
                     <i class="fa fa-eye-slash fa-fw"></i>
                 </button>

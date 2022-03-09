@@ -36,6 +36,7 @@ router.post('/parties', authMiddleware.isAuthenticated, parties.doCreate);
 router.get('/parties/:id/edit', authMiddleware.isAuthenticated, parties.edit);
 router.post('/parties/:id/edit', authMiddleware.isAuthenticated, parties.doEdit);
 router.post('/parties/:id/delete', authMiddleware.isAuthenticated, parties.delete);
+// router.get('/parties/:id/payment', authMiddleware.isAuthenticated, parties.payment);
 
 // router.get('/parties/:id/comment', authMiddleware.isAuthenticated, parties.comment);
 // router.post('/parties/:id/docomment', authMiddleware.isAuthenticated, parties.doComment);
@@ -47,6 +48,7 @@ router.get('/register', auth.register)
 router.get('/login', auth.login)
 router.get('/register-with-email', auth.registerLocal)
 router.post('/register', upload.single('image'), auth.doRegisterLocal)
+router.get('/activate/:token', auth.activate)
 router.post('/login', auth.doLogin)
 router.get('/logout', auth.logout)
 

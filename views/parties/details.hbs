@@ -12,17 +12,17 @@
       <h2 class="font-weight-semi">{{party.name}}</h2>
       {{!-- <h2>UBICACION</h2> --}}
       <p class="card-address">
-        📍  &nbsp{{party.address}}
+        📍 &nbsp{{party.address}}
       </p>
       <br>
       <div id="events-container">
         <h3>Etiquetas</h3>
         <div class="row">
-            <div class="d-flex">
+          <div class="d-flex">
             {{#each party.tags}}
             <p class="me-4"> #{{this}}</p>
             {{/each}}
-            </div>
+          </div>
         </div>
 
       </div>
@@ -30,18 +30,18 @@
 
     <div>
       <h3>Tickets</h3>
-      <p>💳  &nbspEntrada general + 2 consumiciones hasta las {{party.ticketTime}}, luego puedes acceder pero sin
+      <p>💳 &nbspEntrada general + 2 consumiciones hasta las {{party.ticketTime}}, luego puedes acceder pero sin
         consumiciones</p>
     </div>
 
     <div>
       <h3>Información</h3>
-      <p>📅  &nbsp Fecha: {{#dateHelper date = party.date}}{{/dateHelper}}</p>
-      <p>🕒  &nbsp Horario: de {{party.start}} a {{party.end}}</p>
-      <p>📍  &nbsp Lugar: {{party.place}} </p>
-      <p>😷  &nbsp Es obligatorio el uso de mascarilla en todo momento</p>
+      <p>📅 &nbsp Fecha: {{#dateHelper date = party.date}}{{/dateHelper}}</p>
+      <p>🕒 &nbsp Horario: de {{party.start}} a {{party.end}}</p>
+      <p>📍 &nbsp Lugar: {{party.place}} </p>
+      <p>😷 &nbsp Es obligatorio el uso de mascarilla en todo momento</p>
       {{!-- <p>🏠 {{}} se reserva el derecho de admisión</p> --}}
-      <p>🔞  &nbsp Prohibido la venta a menores de 18 años</p>
+      <p>🔞 &nbsp Prohibido la venta a menores de 18 años</p>
     </div>
 
     <div>
@@ -66,16 +66,19 @@
     <p>🎵 &nbsp{{musicType}}</p>
     {{/each}}
 
+    <div class="mx-2" id="googleMap"></div>
+
+
     {{!-- {{#if currentUser}}
     <p class="p-intro-new-experience"></p>
     <form action="/parties/{{party.id}}/docomment" class="mt-1" method="post" id="comment">
       <div class="form-actions pt-4">
         <!--- rating experience -->
         <h2 class="fa fa-users  nt-c mr-3"> Comenta y valora!!</h2>
-         <label for="comment"></label>
+        <label for="comment"></label>
         <p class=" ml-0 profile-paragraph">
-          <input type="text" class="form-control" id="comment" >
-         </p>
+          <input type="text" class="form-control" id="comment">
+        </p>
         <section class='rating-widget'>
           Valora el evento:
           <!-- Rating Stars Box -->
@@ -106,3 +109,6 @@
 
   </div>
 </div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPHtWkh-7CC2CXc6kBBHh8EldnmlgbKCk&libraries=places"></script>  
+<script src="/js/googleMaps.js"></script>
