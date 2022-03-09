@@ -24,10 +24,15 @@
             {{/each}}
           </div>
         </div>
-
+      </div>
+      <div class="d-flex">
+        <div class="bottom-0 end-0">
+          {{!-- Payment access --}}
+          <a href="/parties/{{party.id}}/payment" class="btn btn-secondary">Comprar</a>
+        </div>
       </div>
     </div>
-
+{{!-- Info cards ID --}}
     <div>
       <h3>Tickets</h3>
       <p>💳 &nbspEntrada general + 2 consumiciones hasta las {{party.ticketTime}}, luego puedes acceder pero sin
@@ -53,8 +58,6 @@
       </ul>
     </div>
 
-
-
     <div>
       <h3>DESCRIPCIÓN</h3>
       <p>{{{party.description}}}</p>
@@ -66,7 +69,10 @@
     <p>🎵 &nbsp{{musicType}}</p>
     {{/each}}
 
+
     <div class="mx-2" id="googleMap"></div>
+
+    {{!-- {{> carousel }} --}}
 
 
     {{!-- {{#if currentUser}}
