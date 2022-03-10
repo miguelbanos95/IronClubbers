@@ -58,7 +58,7 @@ userSchema.virtual('likes', {
 userSchema.virtual('comments', {
   ref: 'Comment', 
   localField: '_id', 
-  foreignField: 'party', 
+  foreignField: 'user', 
   justOne: false,
  });
 

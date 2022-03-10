@@ -43,7 +43,7 @@ router.get('/parties/:id/payment');
 
 
 // router.get('/parties/:id/comment', authMiddleware.isAuthenticated, parties.comment);
-// router.post('/parties/:id/docomment', authMiddleware.isAuthenticated, parties.doComment);
+router.post('/parties/:id', authMiddleware.isAuthenticated, parties.doComment)
 /**
  * AUTH ROUTES 
  */

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
+const Comment = require('./comment.model')
 
 const partySchema = new Schema({
   name: {
@@ -63,6 +64,9 @@ const partySchema = new Schema({
   },
   djs: {
     type: [String]
+  },
+  rating: {
+    type: Number
   }
 }, { 
   timestamps: true,
@@ -89,12 +93,12 @@ partySchema.virtual('likes', {
   justOne: false,
 })
 
-// partySchema.virtual('comments', {
-//   ref: 'Comment', 
-//   localField: '_id', 
-//   foreignField: 'party', 
-//   justOne: false,
-//  });
+partySchema.virtual('comments', {
+  ref: 'Comment', 
+  localField: '_id', 
+  foreignField: 'party', 
+  justOne: false,
+ });
 
 const Party = mongoose.model('Party', partySchema)
 module.exports = Party

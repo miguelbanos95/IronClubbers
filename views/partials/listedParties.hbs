@@ -22,11 +22,14 @@
                 <div class="d-flex flex-row-reverse bd-highlight justify-content-between">
 
                     <h4><big class="card-text text-big mb-1">{{party.price}}€</big></h4>
-
+                    
+                    {{#if party.rating}}
                     <div class="mt-2">
-                        <i class="fa-solid fa-star fa-xl" style="color: yellow;"></i>
+                        <i class="fa-solid fa-star fa-xl" style="color: yellow;">{{comment.rate}}</i>
                         {{!-- <small></small> --}}
+                        {{party.rating}}/5
                     </div>
+                    {{/if}}
 
                 </div>
                 <div class="button-edit">
@@ -34,6 +37,8 @@
                     <small>
                         <a href="/parties/{{party.id}}/edit" class="btn btn-success rounded-pill">Editar</a>
                     </small>
+                    {{else}}
+                   <button type="button" class="btn btn-lg" disabled> </button>
                     {{/if}}
                 </div>
             </div>
