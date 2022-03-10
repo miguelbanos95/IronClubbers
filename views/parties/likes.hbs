@@ -16,7 +16,7 @@
                             <button class="like-button border-0 bg-secondary">
                                 <i data-id="{{party.id}}"
                                     class=" like-action fa-solid fa-heart fa-xl
-                                    {{#userLikedParty likes=party.likes currentUserId=../currentUser.id}} icon-liked {{/userLikedParty}}"></i>
+                                    {{#userLikedParty likes=../likes currentUserId=../currentUser.id}} icon-liked {{/userLikedParty}}"></i>
                             </button>
                             {{/if}}
                         </div>
