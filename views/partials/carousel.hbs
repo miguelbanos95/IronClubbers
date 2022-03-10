@@ -1,20 +1,7 @@
-    <div class="mt-2 mb-4">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                {{#eachCarrusell parties}}
-                <div class="carousel-item mt-4">
-                    <div class="row">
-                        {{#each this as |party|}}
-                        <div class="col-4">
-                            <a id="link-cards" href="/parties/{{party.id}}" style="text-decoration: none">
-                                <div class=" w-100" style="width: 18rem">
-                                    <div id="carousel-position" class="position-relative">
-                                        <img src="{{party.image}}" class="card-img-carousel" style="height:220px;"
-                                            alt="...">
-                                        <div class="carousel-text mt-2">
-                                            <h5 class="card-title">{{party.name}}</h5>
-                                        </div>
-
+<div class="mt-2 mb-4">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            {{#eachCarrusell parties}}
 
             <div class="carousel-item mt-4">
                 <div class="row">
@@ -26,29 +13,30 @@
                                     <img src="{{party.image}}" class="card-img-carousel" style="height:220px;" alt="...">
                                     <div class="mt-2">
                                         <h5 class="card-title">{{party.name}}</h5>
-
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                        {{/each}}
-                    </div>
-                </div>
-                {{/eachCarrusell}}
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {{/each}}
+                </div>
             </div>
+            {{/eachCarrusell}}
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
+</div>
 
 <script>
     window.addEventListener('load', () => {
