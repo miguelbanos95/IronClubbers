@@ -25,7 +25,7 @@ module.exports.list = (req, res, next) => {
     .populate('likes')
     .sort({ createdAt: 'desc' })
     .then((parties) => {
-      console.log({parties});
+      console.log({ parties });
       res.render('common/home', { parties })
     })
     .catch((error) => next(error));
@@ -60,10 +60,10 @@ module.exports.results = (req, res, next) => {
 
 module.exports.detail = (req, res, next) => {
   Party.findById(req.params.id)
-  .populate({ path: 'comments', populate: 'user' })
+    .populate({ path: 'comments', populate: 'user' })
     .then((party) => {
       if (party) {
-        console.log({party})
+        console.log({ party })
         res.render('parties/details', { party });
       } else {
         res.redirect('/parties');
@@ -93,7 +93,6 @@ module.exports.doCreate = (req, res, next) => {
     end: req.body.end,
     date: req.body.date,
     ticketTime: req.body.ticketTime,
-    image: req.body.image || undefined,
     description: req.body.description,
     musicTypes: partyTypeMusic,
     tags: req.body.tags.split(',').slice(0, 4),
@@ -101,7 +100,9 @@ module.exports.doCreate = (req, res, next) => {
     price: req.body.price,
     djs: req.body.djs?.split(',')
   });
-
+  if (req.file) {
+    party.image = req.file.path
+  }
 
   party
     .save()
@@ -135,6 +136,12 @@ module.exports.edit = (req, res, next) => {
 };
 
 module.exports.doEdit = (req, res, next) => {
+  req.body.djs = req.body.djs.split(',')
+  req.body.tags = req.body.tags.split(',')
+
+  if (req.file) {
+    req.body.image = req.file.path
+  }
   Party.findByIdAndUpdate(req.params.id, req.body, { runValidators: true, new: true })
     .then((party) => res.redirect(`/parties/${party.id}`))
     .catch((error) => {
@@ -188,7 +195,7 @@ module.exports.doComment = (req, res, next) => {
           } else {
             res.redirect(`/parties/${commentCreated.party}`)
           }
-          
+
         })
     })
     .catch(next)

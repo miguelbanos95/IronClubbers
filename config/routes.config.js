@@ -34,9 +34,9 @@ router.get('/parties', parties.list);
 router.get('/parties/results', parties.results)
 router.get('/parties/create',authMiddleware.isAuthenticated, parties.create);
 router.get('/parties/:id', parties.detail);
-router.post('/parties', authMiddleware.isAuthenticated, parties.doCreate);
+router.post('/parties', authMiddleware.isAuthenticated, upload.single('image'),  parties.doCreate);
 router.get('/parties/:id/edit', authMiddleware.isAuthenticated, parties.edit);
-router.post('/parties/:id/edit', authMiddleware.isAuthenticated, parties.doEdit);
+router.post('/parties/:id/edit', authMiddleware.isAuthenticated, upload.single('image'), parties.doEdit);
 router.post('/parties/:id/delete', authMiddleware.isAuthenticated, parties.delete);
 
 // router.get('/parties/:id/payment', authMiddleware.isAuthenticated, parties.payment);
