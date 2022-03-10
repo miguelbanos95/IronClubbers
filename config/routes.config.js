@@ -23,6 +23,8 @@ router.get('/', parties.list)
 router.get('/terms', common.terms)
 router.get('/policy-privacy', common.policyPrivacy)
 router.get('/cookies', common.cookies)
+router.get('/contact', common.contact)
+router.post('/contact', common.doContact)
 
 
 /**

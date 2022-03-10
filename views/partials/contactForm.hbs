@@ -1,0 +1,32 @@
+<form action="/contact" method="POST">
+
+    <div class="mb-3">
+        <label for="formGroupExampleInput2">Nombre completo</label>
+        <div class="input-group mb-3">
+            <input value="text" name="name" type="name"
+                class="form-control {{#if errors.name}}is-invalid{{/if}}" placeholder="ej. Juan García">
+            {{#if errors.name}}
+            <div class="invalid-feedback">{{errors.name}}</div>
+            {{/if}}
+        </div>
+
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2">Email</label>
+        <div class="input-group mb-3">
+            <input value="{{user.email}}" name="email" type="email"
+                class="form-control {{#if errors.email}}is-invalid{{/if}}" placeholder="example@example.com">
+            {{#if errors.email}}
+            <div class="invalid-feedback">{{errors.email}}</div>
+            {{/if}}
+        </div>
+    </div>
+
+
+    <div class="mb-3">
+        <label for="text" class="form-label">Asunto</label>
+        <textarea class="form-control" name="issue" id="text" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+</form>
