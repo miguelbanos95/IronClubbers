@@ -11,8 +11,7 @@ const commentSchema = new mongoose.Schema({
  },
  comment: {
    type: String,
-   required: true,
-   required: 'Comment is required'
+   required: 'El comentario es requerido'
  },
  rate: {
    type: Number,

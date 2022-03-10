@@ -53,8 +53,8 @@ hbs.registerHelper('eachCarrusell', function (arr, options) {
 })
 
 hbs.registerHelper('userLikedParty', function (options) {
+  console.log(options.hash);
   const { currentUserId, likes } = options.hash;
-  console.log(currentUserId, likes)
   if (currentUserId && likes && likes.some(like => like.user.equals(currentUserId))) {
     return options.fn(this);
   } else {
