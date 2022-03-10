@@ -1,8 +1,9 @@
+
 {{#if edit }}
-<form action="/parties/{{party.id}}/edit" method="POST">
-  {{else}}
-  <form class="mt-4" action="/parties" method="POST">
-    {{/if}}
+  <form action="/parties/{{party.id}}/edit" method="POST" enctype="multipart/form-data">
+{{else}}
+  <form class="mt-4" action="/parties" method="POST" enctype="multipart/form-data">
+{{/if}}
     <div class="form-group mb-1">
       <label for="name">Nombre del Evento</label>
       <input name="name" type="text" class="form-control {{#if errors.name}}is-invalid{{/if}}" id="name"
@@ -109,7 +110,13 @@
           <button id="add-dj-btn" class="btn btn-secondary">Añadir</button>
         </div>
       </div>
-      <ul id="djs-added"></ul>
+      <ul id="djs-added">
+        {{!-- {{#each party.djs}}
+        <li>
+          {{this}}
+        </li>
+        {{/each}} --}}
+      </ul>
       <input class="no-vissible" id="djs-list-input" type="text" name="djs">
     </div>
 
@@ -153,7 +160,6 @@
         {{/each}}
       </select>
     </div>
-
     <button type="submit" class="btn btn-primary">Enviar solicitud</button>
   </form>
 
