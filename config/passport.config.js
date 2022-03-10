@@ -58,7 +58,6 @@ passport.use('google-auth', new GoogleStrategy(
     const googleID = profile.id;
     const email = profile.emails[0] ? profile.emails[0].value : undefined;
     const name = profile.displayName;
-    console.log()
     if (googleID && email) {
       User.findOne({
         $or: [

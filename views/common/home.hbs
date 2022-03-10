@@ -4,70 +4,6 @@
     </div>
 </div>
 <div class="container">
-    {{!--
-    <div class="mt-4">
-        <h1>Explora</h1>
-    </div>
-    <div>
-        <div class="container mt-4">
-            <div class="row d-flex justify-content-around">
-                <div class="col-2">
-                    <div>
-                        <a href="">
-                            <img class="card-img-top" style="max-width: 150px" src="/images/circle.png"
-                                alt="Card image cap" />
-                        </a>
-                        <div class="card-body">
-                            <p class="card-text small">aaa</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div>
-                        <a href="">
-                            <img class="card-img-top" style="max-width: 150px" src="/images/circle.png"
-                                alt="Card image cap" />
-                        </a>
-                        <div class="card-body">
-                            <p class="card-text small">aaa</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div>
-                        <a href="">
-                            <img class="card-img-top" style="max-width: 150px" src="/images/circle.png"
-                                alt="Card image cap" />
-                        </a>
-                        <div class="card-body">
-                            <p class="card-text small">aaa</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div>
-                        <a href="">
-                            <img class="card-img-top" style="max-width: 150px" src="/images/circle.png"
-                                alt="Card image cap" />
-                        </a>
-                        <div class="card-body">
-                            <p class="card-text small">aaa</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div>
-                        <img class="card-img-top" style="max-width: 150px" src="/images/circle.png"
-                            alt="Card image cap" />
-                        <div class="card-body">
-                            <p class="card-text">aaa
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
 
     <h1 class="mt-4">Top Eventos</h1>
 
@@ -78,11 +14,31 @@
         <div class="row mx-auto">
 
             {{> listedParties }}
-            
+
         </div>
     </div>
 
 </div>
 
+{{#if flashMessage}}
+    <div id="overlay" class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Su solicitud se ha enviado correctamente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+{{/if}}
+
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="/js/axios.js"></script>
+
+<script>
+    const modal = document.querySelector('#overlay');
+    if(modal) {
+        modal.querySelector('.btn-close').addEventListener('click', () => {
+            modal.classList.add('hidden');
+        })
+    }
+</script>

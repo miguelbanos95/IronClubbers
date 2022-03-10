@@ -49,18 +49,15 @@
     box-shadow: 0px 0px 19px -4px rgb(0 0 0 / 12%);
     border: 1px solid rgb(0 0 0 / 5%) !important;
     border-radius: 0.45rem !important;
-    width: 292px !important;
   
 }
 
 .card-img-carousel{
-    width: 350px;
-    border-radius: 0.45rem;
+    width: 250px;
+    border-radius: 50%;
     border: 1px solid rgba(211, 211, 211, 0.05)
 }
-#carousel-position{
-    margin-left: 40px;
-}
+
 #link-cards{
     color: white;
 }
@@ -124,5 +121,32 @@
 
 #card-place{
     margin-top: 5px;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+#overlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 95px;
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.2s ease;
+    animation: fadeIn linear 0.2s;
+}
+
+.hidden {
+    opacity: 0;
 }
 
