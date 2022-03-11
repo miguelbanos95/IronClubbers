@@ -7,7 +7,7 @@ _Live the music to another level_
 
 ![Image text](https://github.com/miguelbanos95/Proyecto2/blob/master/public/images/silhouette-of-people-in-front-of-stage.jpeg)
 
-_descripcion_
+We present the app that every clubber needs. Exclusively shows all events, music and night related in a very visual and interactive way. We offer up the chance chance of creating and customizing  and publishing your own events and parties so that all the wonderful community can have a blast
 
 ## Lets start! 🚀
 
@@ -25,23 +25,14 @@ $ git clone “copied link”
 ### Submission📋
 
 - Upon completion, run the following commands:
-
 ```
 $ git add .
-```
-
-_Next step_
-
-```
 $ git commit -m "done"
 ```
-
 _Finally_
-
 ```
 $ git push origin master
 ```
-
 - Create a Pull Request of your work.
 
 ### Step 0 | Initialize the project ⚙️
@@ -59,13 +50,13 @@ Now you are ready to start! 🚀
 * **[Miguel Baños](https://github.com/miguelbanos95)**
 * **[Pedro Baños](https://github.com/pedrobanos)**
 
-## Expresiones de Gratitud 🎁
+## With thanks to 🎁
 
-* I would like to thank he entire team of Ironhack: 
-* -[Marco Monzón](https://github.com/marco238) 
-* -[Pablo Laso](https://github.com/plaso) 
-* -[Manu Carrillo](https://github.com/manucaralmo)
-* -[Carlos de latorre](https://github.com/Cdelatorre)📢
+I would like to thank he entire team of Ironhack 📢  
+* [Marco Monzón](https://github.com/marco238) 
+* [Pablo Laso](https://github.com/plaso) 
+* [Manu Carrillo](https://github.com/manucaralmo)
+* [Carlos de latorre](https://github.com/Cdelatorre)
 
 <h2 align="left">Languages and Tools 🛠️ </h2>
 <h3 align="left">Programming Languages:</h3>
