@@ -84,5 +84,5 @@ Now you are ready to start! 🚀
 
 ## Authors stats 📦
 
-![Miguel’s GitHub stats](https://github-readme-stats.vercel.app/api?username=miguelbanos95&show_icons=true&theme=radical)
-![Pedro’s GitHub stats](https://github-readme-stats.vercel.app/api?username=pedrobanos&show_icons=true&theme=radical)
+![Miguel’s GitHub stats](https://github-readme-stats.vercel.app/api?username=miguelbanos95&show_icons=true&theme=dark)
+![Pedro’s GitHub stats](https://github-readme-stats.vercel.app/api?username=pedrobanos&show_icons=true&theme=dark)
