@@ -74,7 +74,7 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 
 ## Expresiones de Gratitud 🎁
 
-* I would like to thank he entire team of Ironhack (https://github.com/marco238), (https://github.com/plaso), (https://github.com/manucaralmo), (https://github.com/Cdelatorre)📢
+* I would like to thank he entire team of Ironhack [Marco Monzón](https://github.com/marco238), [Pablo Laso](https://github.com/plaso), [Manu Carrillo](https://github.com/manucaralmo), [Carlos de latorre](https://github.com/Cdelatorre)📢
 
 
 
