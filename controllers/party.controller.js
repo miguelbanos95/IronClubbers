@@ -101,7 +101,7 @@ module.exports.doCreate = (req, res, next) => {
     price: req.body.price,
     djs: req.body.djs?.split(',')
   });
-
+console.log(req.body.image)
 
   party
     .save()

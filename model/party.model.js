@@ -38,7 +38,7 @@ const partySchema = new Schema({
   },
   image: {
     type: String,
-    default: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.deviantart.com%2Fdonjas%2Fart%2FParty-People-215748549&psig=AOvVaw2IjpmC600t25AODVn0CMwU&ust=1645553982281000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPDS4Lm0kfYCFQAAAAAdAAAAABAJ",
+    default: "https://fever.imgix.net/plan/photo/97de3cd2-9894-11ec-8c7c-8ada2af5ee66.jpg?w=550&h=550&auto=format&fm=jpg"
   },
   description: {
     type: String,
