@@ -61,7 +61,11 @@ Now you are ready to start! 🚀
 
 ## Expresiones de Gratitud 🎁
 
-* I would like to thank he entire team of Ironhack [Marco Monzón](https://github.com/marco238), [Pablo Laso](https://github.com/plaso), [Manu Carrillo](https://github.com/manucaralmo), [Carlos de latorre](https://github.com/Cdelatorre)📢
+* I would like to thank he entire team of Ironhack: 
+* -[Marco Monzón](https://github.com/marco238) 
+* -[Pablo Laso](https://github.com/plaso) 
+* -[Manu Carrillo](https://github.com/manucaralmo)
+* -[Carlos de latorre](https://github.com/Cdelatorre)📢
 
 <h2 align="left">Languages and Tools 🛠️ </h2>
 <h3 align="left">Programming Languages:</h3>
