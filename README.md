@@ -54,10 +54,6 @@ $ npm install
 ```
 Now you are ready to start! 🚀 
 
-## Despliegue 📦
-
-![Miguel’s GitHub stats](https://github-readme-stats.vercel.app/api?username=miguelbanos95&show_icons=true&theme=radical)
-
 ## Authors ✒️
 
 * **[Miguel Baños](https://github.com/miguelbanos95)**
@@ -86,3 +82,7 @@ Now you are ready to start! 🚀
   <a href="https://nodejs.org" target="_blank" rel="noreferrer"> 
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> </p>
 
+## Authors stats 📦
+
+![Miguel’s GitHub stats](https://github-readme-stats.vercel.app/api?username=miguelbanos95&show_icons=true&theme=radical)
+![Pedro’s GitHub stats](https://github-readme-stats.vercel.app/api?username=pedrobanos&show_icons=true&theme=radical)
