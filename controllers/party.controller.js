@@ -100,6 +100,7 @@ module.exports.doCreate = (req, res, next) => {
     price: req.body.price,
     djs: req.body.djs?.split(',')
   });
+
   if (req.file) {
     party.image = req.file.path
   }

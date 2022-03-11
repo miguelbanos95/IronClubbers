@@ -72,8 +72,9 @@
     <div class="form-group mb-1">
       <label for="image">Imagen</label>
       <div class="input-group mb-3">
-          <input class="form-control" name="image" type="file" id="image">
-      </div>  
+          <input class="form-control" name="image" type="file"  value="{{ party.image }}">
+      </div>
+
       {{#if errors.image}}
       <div class="invalid-feedback">
         {{errors.image.message}}
