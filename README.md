@@ -69,8 +69,8 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 
 ## Authors ✒️
 
-* **Miguel Baños** - [miguelbanos95](https://github.com/miguelbanos95)
-* **Pedro Baños** - [pedrobanos](https://github.com/pedrobanos)
+* **[Miguel Baños](https://github.com/miguelbanos95)**
+* **[Pedro Baños](https://github.com/pedrobanos)**
 
 ## Expresiones de Gratitud 🎁
 
