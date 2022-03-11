@@ -1,5 +1,6 @@
 {{#each parties as |party|}}
 
+
 <div class="col-xl-3 col-md-4 col-sm-6 col-xs-12 gy-4 align-items-stretch">
     <a id="link-cards" href="/parties/{{party.id}}" style="text-decoration: none">
         <div id="cards-style" class="card w-100 bg-secondary" style="width: 18rem">
@@ -22,7 +23,7 @@
                 <div class="d-flex flex-row-reverse bd-highlight justify-content-between">
 
                     <h4><big class="card-text text-big mb-1">{{party.price}}€</big></h4>
-                    
+
                     {{#if party.rating}}
                     <div class="mt-2">
                         <i class="fa-solid fa-star fa-xl" style="color: yellow;">{{comment.rate}}</i>
@@ -30,18 +31,27 @@
                         {{party.rating}}/5
                     </div>
                     {{/if}}
+<p>{{../currentUser.manager}}</p>
 
-                </div>
-                <div class="button-edit">
                     {{#if ../currentUser}}
-                    <small>
-                        <a href="/parties/{{party.id}}/edit" class="btn btn-success rounded-pill">Editar</a>
-                    </small>
+                    {{#ifManagerTrue manager=../currentUser.manager}}
+                    <div class="button-delete">
+                        <form class="" action="/parties/{{party.id}}/delete" method="POST">
+                            <button class="btn btn-danger rounded-pill" type="submit">Eliminar</button>
+                        </form>
+                        <small>
+                            <a href="/parties/{{party.id}}/edit" class="btn btn-success rounded-pill">Editar</a>
+                        </small>
+                    </div>
+                      {{/ifManagerTrue}}
                     {{else}}
-                   <button type="button" class="btn btn-lg" disabled> </button>
+                    <button type="button" class="btn btn-lg" disabled> </button>
                     {{/if}}
+                   
                 </div>
             </div>
+
+            
         </div>
 
     </a>

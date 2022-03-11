@@ -26,3 +26,4 @@ module.exports.doContact = (req, res, next) => {
     req.flash('flashMessage', 'true');
     res.redirect('/')
 }
+

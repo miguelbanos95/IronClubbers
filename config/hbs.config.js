@@ -62,14 +62,42 @@ hbs.registerHelper('userLikedParty', function (options) {
   }
 })
 
-hbs.registerHelper('rating', (party, options) => {
-  const rating = party.rating
-  if(!rating){
-    return "El evento no tiene ninguna valoración " 
-  } else { 
-    return `${rating}/5 <i class='fa fa-star fa-fw'></i>`
+
+
+hbs.registerHelper('ifExistManager', function (options) {
+  const { partyOwnerId, managerId } = options.hash;
+  if (partyOwnerId && managerId && partyOwnerId==partyId) {
+    return options.fn(this);
+  } else {
+    return options.inverse(this);
   }
 })
+
+
+hbs.registerHelper('ifManagerTrue', function (options) {
+const { manager } = options.hash;
+if (manager && manager === 'true') {
+  return options.fn(this);
+} else {
+  return options.inverse(this);
+}
+})
+
+
+// check if the user key "dueño" has "off" value
+hbs.registerHelper('ifManagerOff', function (options) {
+const { manager } = options.hash;
+if (manager && manager === 'nope') {
+  return options.fn(this);
+} else {
+  return options.inverse(this);
+}
+})
+
+
+
+
+
 
 
   

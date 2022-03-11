@@ -26,6 +26,12 @@
         <div class="border border-right border-light"></div>
         <li class="nav-item">
           <a class="nav-link active" href="/parties/create">Crea tu evento</a>
+       {{#ifManagerTrue manager=currentUser.manager}}
+          {{!-- <form action="/manager" method="post">
+             
+              <button type="submit"> Manager</button>
+          </form> --}}
+           {{/ifManagerTrue}}
         </li>
       </ul>
       <form class="d-flex mx-4" method="GET" action="/parties/results">

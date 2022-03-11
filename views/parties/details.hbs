@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-{{!-- Info cards ID --}}
+    {{!-- Info cards ID --}}
     <div>
       <h3>Tickets</h3>
       <p>💳 &nbspEntrada general + 2 consumiciones hasta las {{party.ticketTime}}, luego puedes acceder pero sin
@@ -75,13 +75,13 @@
     {{!-- {{> carousel }} --}}
 
 
-  {{#if currentUser}}
-
+    {{#if currentUser}}
+    {{!-- {{#ifCommentOfTheCurrentUser idUserWhoCommented=comment.user.id currentUserId=currentUser.id}} --}}
     <form action="/parties/{{party._id}}" class="mt-1" method="POST">
       <div class="form-actions pt-4">
         <!--- rating experience -->
         <h2><span class="fa fa-users  nt-c mr-3"></span>Comenta y valora</h2>
-       Valora la experiencia:
+        Valora la experiencia:
         <!-- Rating Stars Box -->
         <div class="row mx-auto bg-dark mx-auto mb-4">
           <div class="col-md-5 col-sm-12 py-2">
@@ -99,30 +99,30 @@
           </div>
         </div>
 
-      <div>
-        <div class="form-group mb-1">
-          <img class="rounded-circle shadow-1-strong me-3" src={{currentUser.image}} alt="avatar" width="65"
-            height="65" />
-          <label for="comment">{{ currentUser.name }}</label>
-        </div>
-        <br>
         <div>
-          <textarea name="comment" type="text" class="form-control html-editor" id="comment" placeholder="Pon tus comentarios!"
-            value="{{ party.comment }}"></textarea>
+          <div class="form-group mb-1">
+            <img class="rounded-circle shadow-1-strong me-3" src={{currentUser.image}} alt="avatar" width="65"
+              height="65" />
+            <label for="comment">{{ currentUser.name }}</label>
+          </div>
+          <br>
+          <div>
+            <textarea name="comment" type="text" class="form-control html-editor" id="comment"
+              placeholder="Pon tus comentarios!" value="{{ party.comment }}"></textarea>
           </div>
           <div class="invalid-feedback">
             {{errors.name.message}}
           </div>
           <br>
-            <button class="btn btn-primary btn mb-2 " type="submit">Comenta</button>
-      </form>
-
-   {{/if}}
+          <button class="btn btn-primary btn mb-2 " type="submit">Comenta</button>
+    </form>
+    {{!-- {{/ifCommentOfTheCurrentUser}} --}}
+    {{/if}}
 
 
     <section class="mt-5">
       <h2><span class="far fa-comments   nt-c mr-3"></span>Commentarios </h2>
-      
+
     </section>
     <br>
     <hr>
@@ -136,9 +136,21 @@
             {{#dateHelper date = comment.createdAt}}{{/dateHelper}}
           </span>
           <span class="ml-3 p-0 mb-0 nt-f">{{comment.rate}}<i class='fa fa-star fa-fw nt-c'></i></span>
-      </div>
-      <div class="flex-row">
-        <p><i>"{{comment.comment}}"</i></p>
+        </div>
+        <div class="flex-row">
+          <p><i>"{{comment.comment}}"</i></p>
+
+
+
+          {{!-- delete comment button--}}
+
+          {{!-- <form method="POST" action="/comment/delete/{{comment.id}}/{{../party.id}}/{{comment.user.id}}">
+            <button type="submit" class="btn btn-primary">Delete</button>
+          </form>
+          Delete
+          </a> --}}
+
+        </div>
       </div>
     </div>
     <hr>
@@ -148,7 +160,6 @@
 
 </div>
 
-</div>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPHtWkh-7CC2CXc6kBBHh8EldnmlgbKCk&libraries=places"></script>  
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPHtWkh-7CC2CXc6kBBHh8EldnmlgbKCk&libraries=places"></script>
 <script src="/js/googleMaps.js"></script>

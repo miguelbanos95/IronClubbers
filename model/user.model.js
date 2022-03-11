@@ -33,6 +33,10 @@ const userSchema = new mongoose.Schema({
   twitterID: {
     type: String
   },
+  manager: {
+    type: String,
+    default: "nope"
+  },
   active: {
     type: Boolean,
     default: false
