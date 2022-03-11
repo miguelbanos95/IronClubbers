@@ -23,14 +23,16 @@
             <li><a class="dropdown-item" href="/parties/results/?musicTypes=reggaeton">Reggaeton</a></li>
           </ul>
         </li>
+         {{#ifManagerTrue manager=currentUser.manager}}
         <div class="border border-right border-light"></div>
         <li class="nav-item">
           <a class="nav-link active" href="/parties/create">Crea tu evento</a>
-       {{#ifManagerTrue manager=currentUser.manager}}
-          {{!-- <form action="/manager" method="post">
+       {{!-- 
+          <form action="/manager" method="post">
              
               <button type="submit"> Manager</button>
           </form> --}}
+         
            {{/ifManagerTrue}}
         </li>
       </ul>
