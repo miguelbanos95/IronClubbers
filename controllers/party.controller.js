@@ -148,16 +148,3 @@ module.exports.delete = (req, res, next) => {
 
 
 
-
-module.exports.payment = (req, res, next) => {
-  Party.findById(req.params.id)
-    // .populate('user')
-    .then(parties => {
-      if (parties) {
-        res.render('parties/payment', {
-          parties
-        })
-      }
-    })
-    .catch(error => next(error));
-}
