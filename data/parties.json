@@ -256,7 +256,15 @@
     },
     {
         "name": "Andrés Campo en Ekho Club en La Riviera + copa",
-        "tags": [],
+        "tags": [
+            "TechHouse",
+            "LaRiviera",
+            "Madrid",
+            "AndresCampos",
+            "party",
+            "fiestón"
+
+        ],
         "place": "La Riviera",
         "address": "Paseo Bajo Virgen del Puerto, s/n, 28005 (Príncipe Pío-Puerta del Ángel",
         "start": "00:00",
@@ -268,7 +276,7 @@
         "musicTypes": [
             "tech-house"
         ],
-        "capacity": 1,
+        "capacity": 1200,
         "djs": [
             "Andrés Campos"
         ]
@@ -291,7 +299,7 @@
         "musicTypes": [
             "remember"
         ],
-        "capacity": 1,
+        "capacity": 3000,
         "djs": [
             "Jumper Brothers",
             "Pastis & Buenri",
@@ -366,23 +374,23 @@
         "price": 25
     },
     {
-        "name": "",
+        "name": "Shubshock x Evangelos en Zoologico",
         "tags": [
-            "WaterParty", "Terraza", "Atracciones", "Agua", "fiestón", "top"
+            "Zoologico", "Madrid", "Edm", "NightLife", "fiestón", "top"
         ],
-        "place": "",
-        "address": "",
-        "start": "18:00",
+        "place": "Sala Marco Aldany",
+        "address": "C. de la Princesa, 1, 28008 Madrid",
+        "start": "00:00",
         "end": "06:00",
-        "date": "2022-07-23",
-        "ticketTime": "20:00",
-        "image": "",
-        "description": "",
-        "musicTypes": ["hardstyle", "remember"],
+        "date": "2022-04-16",
+        "ticketTime": "01:00",
+        "image": "https://4.bp.blogspot.com/-kt6SdTns12o/WYrXJ4Z1IAI/AAAAAAAAEgs/boPgPEwYbaARHpV6iJDnKXdN92s7vZXvACLcBGAs/s1600/los-20-de-wololo-S%2526E.png",
+        "description": "Revive la mágia del duo de Djs más de moda. Con un show especial y una puesta en escena jamás vista.",
+        "musicTypes": ["edm"],
         "djs": [
-            ""
+            "Shubshock & Evangelos"
         ],
-        "price": 25
+        "price": 70
     },
     {
         "name": "Sam Paganini en Ekho Club",

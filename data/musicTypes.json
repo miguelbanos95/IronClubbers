@@ -1,23 +1,23 @@
 {
-    "techno": {
-      "text": "🖤  techno"
-    },
-    "tech-house": {
-      "text": " 🧼 tech-house"
-    },
-
-    "hardstyle": {
-      "text": "🤯 hardstyle"
-
-    },
-    "melodic-Techno": {
-        "text": "🚀 melodic-techno"
-    },
-    "reggaeton": {
-        "text": "🤮 reggaeton"
-    },
-    "remember": {
-      "text": "🎧 remember"
-    }
-
+  "techno": {
+    "text": "🖤  techno"
+  },
+  "tech-house": {
+    "text": " 🧼 tech-house"
+  },
+  "hardstyle": {
+    "text": "🤯 hardstyle"
+  },
+  "melodic-Techno": {
+    "text": "🚀 melodic-techno"
+  },
+  "reggaeton": {
+    "text": "🤮 reggaeton"
+  },
+  "remember": {
+    "text": "🎧 remember"
+  },
+  "edm": {
+    "text": "💊 edm"
   }
+}

@@ -9,8 +9,7 @@
     </div>
 
     <div class="col-md-6 col-sm-12 py-2">
-      <h2 class="font-weight-semi">{{party.name}}</h2>
-      {{!-- <h2>UBICACION</h2> --}}
+      <h2 class="font-weight-semi mb-2">{{party.name}}</h2>
       <p class="card-address">
         📍 &nbsp{{party.address}}
       </p>
@@ -25,22 +24,16 @@
           </div>
         </div>
       </div>
-      <div class="d-flex">
-        <div class="bottom-0 end-0">
-          {{!-- Payment access --}}
-          <a href="/parties/{{party.id}}/payment" class="btn btn-secondary">Comprar</a>
-        </div>
-      </div>
     </div>
     {{!-- Info cards ID --}}
     <div>
-      <h3>Tickets</h3>
+      <h3 class="mt-4">Tickets</h3>
       <p>💳 &nbspEntrada general + 2 consumiciones hasta las {{party.ticketTime}}, luego puedes acceder pero sin
         consumiciones</p>
     </div>
 
     <div>
-      <h3>Información</h3>
+      <h3 class="mt-2">Información</h3>
       <p>📅 &nbsp Fecha: {{#dateHelper date = party.date}}{{/dateHelper}}</p>
       <p>🕒 &nbsp Horario: de {{party.start}} a {{party.end}}</p>
       <p>📍 &nbsp Lugar: {{party.place}} </p>
@@ -50,7 +43,7 @@
     </div>
 
     <div>
-      <h3>Line Up</h3>
+      <h3 class="mt-2">Line Up</h3>
       <ul>
         {{#each party.djs}}
         <li>{{this}}</li>
@@ -59,24 +52,25 @@
     </div>
 
     <div>
-      <h3>DESCRIPCIÓN</h3>
+      <h3 class="mt-2">Descripción</h3>
       <p>{{{party.description}}}</p>
     </div>
 
 
-    <h3>ESTILOS</h3>
+    <h3 class="mt-2">Estilos</h3>
     {{#each party.musicTypes as |musicType|}}
     <p>🎵 &nbsp{{musicType}}</p>
     {{/each}}
 
 
-    <div class="mx-2" id="googleMap"></div>
-
-    {{!-- {{> carousel }} --}}
-
+    <div class="mx-2 mt-4" id="googleMap"></div>
 
     {{#if currentUser}}
+<<<<<<< HEAD
     {{!-- {{#ifCommentOfTheCurrentUser idUserWhoCommented=comment.user.id currentUserId=currentUser.id}} --}}
+=======
+
+>>>>>>> master
     <form action="/parties/{{party._id}}" class="mt-1" method="POST">
       <div class="form-actions pt-4">
         <!--- rating experience -->
@@ -116,7 +110,11 @@
           <br>
           <button class="btn btn-primary btn mb-2 " type="submit">Comenta</button>
     </form>
+<<<<<<< HEAD
     {{!-- {{/ifCommentOfTheCurrentUser}} --}}
+=======
+
+>>>>>>> master
     {{/if}}
 
 
@@ -140,27 +138,20 @@
         </div>
         <div class="flex-row">
           <p><i>"{{comment.comment}}"</i></p>
-
-
-
-          {{!-- delete comment button--}}
-
-          {{!-- <form method="POST" action="/comment/delete/{{comment.id}}/{{../party.id}}/{{comment.user.id}}">
-            <button type="submit" class="btn btn-primary">Delete</button>
-          </form>
-          Delete
-          </a> --}}
-
         </div>
       </div>
+      <hr>
+      {{/each}}
     </div>
-    <hr>
-    {{/each}}
+
+
   </div>
 
-
+<<<<<<< HEAD
+=======
 </div>
 
+>>>>>>> master
 <script
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPHtWkh-7CC2CXc6kBBHh8EldnmlgbKCk&libraries=places"></script>
 <script src="/js/googleMaps.js"></script>
