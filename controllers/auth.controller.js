@@ -83,10 +83,6 @@ module.exports.doLoginGoogle = (req, res, next) => {
   login(req, res, next, 'google-auth')
 }
 
-module.exports.doLoginTwitter = (req, res, next) => {
-  login(req, res, next, 'twitter-auth')
-}
-
 module.exports.logout = (req, res, next) => {
   req.logout();
   res.redirect('/');

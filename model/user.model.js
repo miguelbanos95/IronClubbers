@@ -30,9 +30,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: "https://i0.wp.com/alcabodelacalle.es/wp-content/uploads/2021/10/fabrik-humanes.jpg?w=1392&ssl=1"
   },
-  twitterID: {
-    type: String
-  },
+  // twitterID: {
+  //   type: String
+  // },
   manager: {
     type: String,
     default: "nope"

@@ -2,7 +2,6 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const mongoose = require('mongoose');
-const TwitterStrategy = require('passport-twitter').Strategy;
 const User = require('../model/user.model');
 
 passport.serializeUser((user, next) => {
@@ -87,16 +86,4 @@ passport.use('google-auth', new GoogleStrategy(
     }
   }
 ))
-
-passport.use('twitter-auth',new TwitterStrategy({
-  consumerKey: process.env.TWITTER_CONSUMER_KEY,
-  consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
-  callbackURL: process.env.TWITTER_URI || '/auth/twitter/callback'
-},
-function(token, tokenSecret, profile, cb) {
-  User.findOrCreate({ twitterId: profile.id }, function (err, user) {
-    return cb(err, user);
-  });
-}
-));
 
