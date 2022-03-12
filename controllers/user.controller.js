@@ -1,6 +1,5 @@
 const Like = require('../model/like.model')
 const Comment = require('../model/comment.model')
-const Payment = require("../model/payment.model");
 const Party = require('../model/party.model');
 const User = require('../model/user.model');
 

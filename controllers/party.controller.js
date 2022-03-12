@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Party = require('../model/party.model');
 const musicTypes = Object.keys(require('../data/musicTypes.json'));
 const Comment = require('../model/comment.model')
-const Payment = require("../model/payment.model");
 
 
 
