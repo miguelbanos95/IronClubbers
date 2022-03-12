@@ -101,7 +101,6 @@ module.exports.doComment = (req, res, next) => {
 
 
 module.exports.manager = (req, res, next) => {
-    console.log("holka",req.user)
     User.findByIdAndUpdate(req.user.id, {manager : true})
     .then(()=>{
         console.log("success", req.user,{new:true})

@@ -18,6 +18,7 @@ mongoose.connection.once('open', () => {
           ...party,
           price: Math.floor(Math.random() * 20 + 10),
           capacity: Math.floor(Math.random() * 120 + 100),
+          rating: (Math.random()* 3 + 2).toFixed(2),
         }).save()
           .then(party => console.log(party))
           .catch(err => console.error(err))
