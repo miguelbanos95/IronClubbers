@@ -9,8 +9,7 @@
     </div>
 
     <div class="col-md-6 col-sm-12 py-2">
-      <h2 class="font-weight-semi">{{party.name}}</h2>
-      {{!-- <h2>UBICACION</h2> --}}
+      <h2 class="font-weight-semi mb-2">{{party.name}}</h2>
       <p class="card-address">
         📍 &nbsp{{party.address}}
       </p>
@@ -25,22 +24,16 @@
           </div>
         </div>
       </div>
-      <div class="d-flex">
-        <div class="bottom-0 end-0">
-          {{!-- Payment access --}}
-          <a href="/parties/{{party.id}}/payment" class="btn btn-secondary">Comprar</a>
-        </div>
-      </div>
     </div>
-{{!-- Info cards ID --}}
+    {{!-- Info cards ID --}}
     <div>
-      <h3>Tickets</h3>
+      <h3 class="mt-4">Tickets</h3>
       <p>💳 &nbspEntrada general + 2 consumiciones hasta las {{party.ticketTime}}, luego puedes acceder pero sin
         consumiciones</p>
     </div>
 
     <div>
-      <h3>Información</h3>
+      <h3 class="mt-2">Información</h3>
       <p>📅 &nbsp Fecha: {{#dateHelper date = party.date}}{{/dateHelper}}</p>
       <p>🕒 &nbsp Horario: de {{party.start}} a {{party.end}}</p>
       <p>📍 &nbsp Lugar: {{party.place}} </p>
@@ -50,7 +43,7 @@
     </div>
 
     <div>
-      <h3>Line Up</h3>
+      <h3 class="mt-2">Line Up</h3>
       <ul>
         {{#each party.djs}}
         <li>{{this}}</li>
@@ -59,29 +52,26 @@
     </div>
 
     <div>
-      <h3>DESCRIPCIÓN</h3>
+      <h3 class="mt-2">Descripción</h3>
       <p>{{{party.description}}}</p>
     </div>
 
 
-    <h3>ESTILOS</h3>
+    <h3 class="mt-2">Estilos</h3>
     {{#each party.musicTypes as |musicType|}}
     <p>🎵 &nbsp{{musicType}}</p>
     {{/each}}
 
 
-    <div class="mx-2" id="googleMap"></div>
+    <div class="mx-2 mt-4" id="googleMap"></div>
 
-    {{!-- {{> carousel }} --}}
-
-
-  {{#if currentUser}}
+    {{#if currentUser}}
 
     <form action="/parties/{{party._id}}" class="mt-1" method="POST">
       <div class="form-actions pt-4">
         <!--- rating experience -->
         <h2><span class="fa fa-users  nt-c mr-3"></span>Comenta y valora</h2>
-       Valora la experiencia:
+        Valora la experiencia:
         <!-- Rating Stars Box -->
         <div class="row mx-auto bg-dark mx-auto mb-4">
           <div class="col-md-5 col-sm-12 py-2">
@@ -99,30 +89,30 @@
           </div>
         </div>
 
-      <div>
-        <div class="form-group mb-1">
-          <img class="rounded-circle shadow-1-strong me-3" src={{currentUser.image}} alt="avatar" width="65"
-            height="65" />
-          <label for="comment">{{ currentUser.name }}</label>
-        </div>
-        <br>
         <div>
-          <textarea name="comment" type="text" class="form-control html-editor" id="comment" placeholder="Pon tus comentarios!"
-            value="{{ party.comment }}"></textarea>
+          <div class="form-group mb-1">
+            <img class="rounded-circle shadow-1-strong me-3" src={{currentUser.image}} alt="avatar" width="65"
+              height="65" />
+            <label for="comment">{{ currentUser.name }}</label>
+          </div>
+          <br>
+          <div>
+            <textarea name="comment" type="text" class="form-control html-editor" id="comment"
+              placeholder="Pon tus comentarios!" value="{{ party.comment }}"></textarea>
           </div>
           <div class="invalid-feedback">
             {{errors.name.message}}
           </div>
           <br>
-            <button class="btn btn-primary btn mb-2 " type="submit">Comenta</button>
-      </form>
+          <button class="btn btn-primary btn mb-2 " type="submit">Comenta</button>
+    </form>
 
-   {{/if}}
+    {{/if}}
 
 
     <section class="mt-5">
       <h2><span class="far fa-comments   nt-c mr-3"></span>Commentarios </h2>
-      
+
     </section>
     <br>
     <hr>
@@ -136,19 +126,20 @@
             {{#dateHelper date = comment.createdAt}}{{/dateHelper}}
           </span>
           <span class="ml-3 p-0 mb-0 nt-f">{{comment.rate}}<i class='fa fa-star fa-fw nt-c'></i></span>
+        </div>
+        <div class="flex-row">
+          <p><i>"{{comment.comment}}"</i></p>
+        </div>
       </div>
-      <div class="flex-row">
-        <p><i>"{{comment.comment}}"</i></p>
-      </div>
+      <hr>
+      {{/each}}
     </div>
-    <hr>
-    {{/each}}
+
+
   </div>
 
-
 </div>
 
-</div>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPHtWkh-7CC2CXc6kBBHh8EldnmlgbKCk&libraries=places"></script>  
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPHtWkh-7CC2CXc6kBBHh8EldnmlgbKCk&libraries=places"></script>
 <script src="/js/googleMaps.js"></script>
