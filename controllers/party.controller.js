@@ -1,22 +1,9 @@
 const mongoose = require('mongoose');
 const Party = require('../model/party.model');
-const User = require('../model/user.model');
 const musicTypes = Object.keys(require('../data/musicTypes.json'));
-const Like = require('../model/like.model');
 const Comment = require('../model/comment.model')
 const Payment = require("../model/payment.model");
 
-
-// module.exports.list = (req, res, next) => {
-//   Like.find()
-//     .then(likes=> {
-//       return Party.find()
-//         .sort({ createdAt: 'desc' })
-//         .then((parties) => res.render('common/home', { parties, likes }))
-//     })
-
-//     .catch((error) => next(error));
-// };
 
 
 module.exports.list = (req, res, next) => {
@@ -25,7 +12,7 @@ module.exports.list = (req, res, next) => {
     .populate('likes')
     .sort({ createdAt: 'desc' })
     .then((parties) => {
-      console.log({ parties });
+      console.log({parties});
       res.render('common/home', { parties })
     })
     .catch((error) => next(error));
@@ -60,10 +47,10 @@ module.exports.results = (req, res, next) => {
 
 module.exports.detail = (req, res, next) => {
   Party.findById(req.params.id)
-    .populate({ path: 'comments', populate: 'user' })
+  .populate({ path: 'comments', populate: 'user' })
     .then((party) => {
       if (party) {
-        console.log({ party })
+        console.log({party})
         res.render('parties/details', { party });
       } else {
         res.redirect('/parties');
@@ -100,8 +87,8 @@ module.exports.doCreate = (req, res, next) => {
     price: req.body.price,
     djs: req.body.djs?.split(',')
   });
-
-  if (req.file) {
+  
+  if(req.file){
     party.image = req.file.path
   }
 
@@ -137,12 +124,6 @@ module.exports.edit = (req, res, next) => {
 };
 
 module.exports.doEdit = (req, res, next) => {
-  req.body.djs = req.body.djs.split(',')
-  req.body.tags = req.body.tags.split(',')
-
-  if (req.file) {
-    req.body.image = req.file.path
-  }
   Party.findByIdAndUpdate(req.params.id, req.body, { runValidators: true, new: true })
     .then((party) => res.redirect(`/parties/${party.id}`))
     .catch((error) => {
@@ -165,42 +146,8 @@ module.exports.delete = (req, res, next) => {
     .catch(error => next(error));
 };
 
-function calculateRating(comments = []) {
-  const commentsWithRating = comments.filter(comment => comment.rate || comment.rate === 0)
 
-  if (commentsWithRating) {
-    return (commentsWithRating.reduce((acc, curr) => acc + curr.rate, 0) / commentsWithRating.length).toFixed(2)
-  }
-  return undefined
-}
 
-module.exports.doComment = (req, res, next) => {
-  const comment = {
-    party: req.params.id,
-    user: req.user.id,
-    comment: req.body.comment,
-    rate: req.body.rate
-  }
-  Comment.create(comment)
-    .then((commentCreated) => {
-      return Party.findById(req.params.id)
-        .populate('comments')
-        .then(party => {
-          const rating = calculateRating(party.comments)
-
-          if (party.rating !== rating) {
-            party.rating = rating
-
-            return party.save()
-              .then(() => res.redirect(`/parties/${commentCreated.party}`))
-          } else {
-            res.redirect(`/parties/${commentCreated.party}`)
-          }
-
-        })
-    })
-    .catch(next)
-};
 
 module.exports.payment = (req, res, next) => {
   Party.findById(req.params.id)

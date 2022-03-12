@@ -12,6 +12,9 @@ const partySchema = new Schema({
     minlength: [3, 'Min. 3 caracteres']
     
   },
+  managerId: {
+    type: String
+  },
   place: {
     type: String,
     required: [true, "Introduzca el lugar"]
@@ -67,7 +70,7 @@ const partySchema = new Schema({
   },
   rating: {
     type: Number
-  }
+  },
 }, { 
   timestamps: true,
   toJSON: {

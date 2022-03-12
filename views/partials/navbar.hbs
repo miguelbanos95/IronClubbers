@@ -25,10 +25,19 @@
 
           </ul>
         </li>
+         {{!-- {{#ifManagerTrue manager=currentUser.manager}} --}}
         <div class="border border-right border-light"></div>
         <li class="nav-item">
           <a class="nav-link active" href="/parties/create">Crea tu evento</a>
         </li>
+         <li>
+          <form action="/manager"  method="post">
+              <button class="btn btn-outline-none text-light " type="submit"> Admin</button>
+          </form>
+          </li>
+
+           {{!-- {{/ifManagerTrue}} --}}
+       
       </ul>
       <form class="d-flex mx-4" method="GET" action="/parties/results">
         <input class="form-control me-2" name="name" type="search" placeholder="Encuentra eventos" aria-label="Search">

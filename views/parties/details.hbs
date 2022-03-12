@@ -66,7 +66,11 @@
     <div class="mx-2 mt-4" id="googleMap"></div>
 
     {{#if currentUser}}
+<<<<<<< HEAD
+    {{!-- {{#ifCommentOfTheCurrentUser idUserWhoCommented=comment.user.id currentUserId=currentUser.id}} --}}
+=======
 
+>>>>>>> master
     <form action="/parties/{{party._id}}" class="mt-1" method="POST">
       <div class="form-actions pt-4">
         <!--- rating experience -->
@@ -106,7 +110,11 @@
           <br>
           <button class="btn btn-primary btn mb-2 " type="submit">Comenta</button>
     </form>
+<<<<<<< HEAD
+    {{!-- {{/ifCommentOfTheCurrentUser}} --}}
+=======
 
+>>>>>>> master
     {{/if}}
 
 
@@ -125,6 +133,7 @@
           <span class="ml-3 p-0 date-comment">
             {{#dateHelper date = comment.createdAt}}{{/dateHelper}}
           </span>
+          <br>
           <span class="ml-3 p-0 mb-0 nt-f">{{comment.rate}}<i class='fa fa-star fa-fw nt-c'></i></span>
         </div>
         <div class="flex-row">
@@ -138,8 +147,11 @@
 
   </div>
 
+<<<<<<< HEAD
+=======
 </div>
 
+>>>>>>> master
 <script
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPHtWkh-7CC2CXc6kBBHh8EldnmlgbKCk&libraries=places"></script>
 <script src="/js/googleMaps.js"></script>
