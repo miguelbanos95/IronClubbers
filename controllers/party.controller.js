@@ -80,7 +80,6 @@ module.exports.doCreate = (req, res, next) => {
     end: req.body.end,
     date: req.body.date,
     ticketTime: req.body.ticketTime,
-    image: req.body.image || undefined,
     description: req.body.description,
     musicTypes: partyTypeMusic,
     tags: req.body.tags.split(',').slice(0, 4),
@@ -88,7 +87,10 @@ module.exports.doCreate = (req, res, next) => {
     price: req.body.price,
     djs: req.body.djs?.split(',')
   });
-
+  
+  if(req.file){
+    party.image = req.file.path
+  }
 
   party
     .save()
