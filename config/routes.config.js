@@ -68,16 +68,16 @@ router.get('/auth/google/callback', auth.doLoginGoogle)
 /**
  * AUTH ROUTES TWITTER
  */
-//  router.get('/auth/twitter',
-//  passport.authenticate('twitter-auth'));
+ router.get('/auth/twitter',
+ passport.authenticate('twitter-auth'));
 
-// router.get('/auth/twitter/callback', 
-//  passport.authenticate('twitter', { failureRedirect: '/login' }),
-//  function(req, res) {
-//      console.log('callback')
-//    // Successful authentication, redirect home.
-//    res.redirect('/');
-//  });
+router.get('/auth/twitter/callback', 
+ passport.authenticate('twitter', { failureRedirect: '/register' }),
+ function(req, res) {
+     console.log('callback')
+   // Successful authentication, redirect home.
+   res.redirect('/');
+ });
 
 /* LIKES COMMENTS FAVS ROUTES*/
 router.get('/favs', authMiddleware.isAuthenticated, user.favList)
